@@ -6,6 +6,17 @@ Boilerplate para o trabalho final do processo trainee.
 
 Para realizar o trabalho, o gerente do grupo deve realizar um fork para um repositório pessoal, e seguir o desenvolvimento a partir do repositório criado.
 
+## Como executar
+
+Utilize o comando abaixo para construir os containers e rodar a aplicação
+```
+  docker-compose up --build
+```
+Caso já tenha os containeres construídos, utilize
+```
+  docker-compose up
+```
+
 ## Backlog do produto
 
 |Épico|Feature|US|Descrição|
