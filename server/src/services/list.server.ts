@@ -1,4 +1,4 @@
-import { json, request, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { List } from '../schema/list';
 
 export default {
@@ -37,4 +37,17 @@ export default {
       return res.status(400).json({ message: "Error in delete List" });
     }
   },
+  async updateList(req: Request, res: Response): Promise<Response> {
+    const { id } = req.body;
+    const { title, body, activities } = req.body;
+    try {
+      const updateList = await List.findOneAndUpdate({ 
+        title,
+        body,
+        activities,
+       },{where: { id }});
+    } 
+  }
+
+
 }
