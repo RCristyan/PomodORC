@@ -1,8 +1,10 @@
 import { Document, Schema, model } from 'mongoose';
-
 interface IList extends Document {
   title: string,
   body: string,
+  activities: [{
+    name: string,
+  }]
 }
 
 const ListSchema = new Schema<IList>({
@@ -13,7 +15,10 @@ const ListSchema = new Schema<IList>({
   },
   body: {
     type: String
-  }
+  },
+  activities: [{
+    name: { type: String },
+  }]
 });
 
 export const List = model<IList>("List", ListSchema);

@@ -1,14 +1,15 @@
-import { Request, Response } from 'express';
+import { json, request, Request, Response } from 'express';
 import { List } from '../schema/list';
 
 export default {
   async createList(req: Request, res: Response): Promise<Response> {
-    const { title, body } = req.body;
+    const { title, body, activities } = req.body;
 
     try {
       const newList = await List.create({
         title,
-        body
+        body,
+        activities,
       });
 
       return res.status(201).json(newList);
@@ -25,6 +26,15 @@ export default {
     } catch (err) {
       return res.status(400).json({ message: "Error in find List" });
     }
-  }
+  },
+  async deleteList(req: Request, res: Response): Promise<Response> {
+    const { id } = req.body;
+    try {
+      const deleteList = await List.findOneAndDelete({ id });
+      return res.status(201).json(deleteList);
 
+    } catch (err) {
+      return res.status(400).json({ message: "Error in delete List" });
+    }
+  },
 }
