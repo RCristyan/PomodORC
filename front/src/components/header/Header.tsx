@@ -1,4 +1,5 @@
 import React from 'react';
+import icon from '../../assets/icon_pomodoro.png';
 import './Header.css';
 
 function Header() {
@@ -7,6 +8,7 @@ function Header() {
         <div className="h1">Pomod</div>
         <div className="h2">ORC</div>
         <div className="h3">.</div>
+        <img className="icon" src={icon}/>
     </div>
   );
 }
