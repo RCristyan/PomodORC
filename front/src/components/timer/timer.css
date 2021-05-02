@@ -1,0 +1,13 @@
+.timer{
+    position: absolute;
+    align-items: center;
+    margin-top: 10rem;
+    margin-left: 50%;
+    border-radius: 50%;
+    text-align: center;
+    border: solid #3CFA4F 0.2rem;
+    padding-left: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
