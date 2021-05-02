@@ -1,6 +1,7 @@
 .App {
     background: #D14117;
     min-height: 100vh;
+    display: flex;
   }
   
   .App-logo {

@@ -1,0 +1,7 @@
+.sidebar{
+    background: #851A09;
+    display: flex;
+    align-items: center;
+    width: 16.67vw;
+    min-height: 100vh;
+}
