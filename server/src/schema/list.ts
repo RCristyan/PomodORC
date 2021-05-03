@@ -20,7 +20,7 @@ const ListSchema = new Schema<IList>({
   },
   activities: [{
     name: { type: String },
-    number: { type: Number, required: true, unique: true },
+    number: { type: Number, required: true },
     status: { type: Boolean }
   }]
 });
