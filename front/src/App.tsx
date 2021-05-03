@@ -8,6 +8,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
       <Sidebar />
       <Timer/>  
       <Header />

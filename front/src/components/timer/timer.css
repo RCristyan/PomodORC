@@ -1,22 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     align-items: center;
     margin-top: 10rem;
-    margin-left: 50%;
+    margin-left: 45%;
 }
 .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     border: solid #3CFA4F 0.25rem;
-    width: 10rem;
-    height: 10rem;
+    width: 20rem;
+    height: 20rem;
     align-items: center;
 }
 .numbers{
     text-align: center;
-    margin-top: 3.5rem;
     font-family: Roboto;
-    font-size: 1.5rem;
+    font-size: 3.34rem;
     color: #3CFA4F ;
 }
