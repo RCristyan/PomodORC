@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .sidebar{
-    background: #851A09;
+    background: #311E1B;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,23 +30,23 @@
 
 .sbDropdown{
     justify-content: flex-start;
-    color: #3CFA4F;
+    color: #5BED43;
     text-decoration: none;
 }
 
 .sbDropdown:hover{
-    background: #a12916;
+    background: #492f2b;
     cursor: pointer;
 }
 
 .sbLink{
-    background: #a12916;
+    background: #492f2b;
     height: auto;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #3CFA4F;
+    color: #5BED43;
     text-decoration: none;
     font-size: .8em;
 }
