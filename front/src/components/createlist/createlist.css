@@ -1,0 +1,13 @@
+.createlist{
+    background: #851A09;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-left: 26.5rem;
+    width: 50%;
+    height: 60%;
+    border-radius: 4%;
+}

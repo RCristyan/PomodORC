@@ -20,3 +20,5 @@ app.use("/", router);
 app.listen(PORT, () => {
     console.log(`O servidor está rodando na porta ${PORT}`);
 });
+
+export default app;
