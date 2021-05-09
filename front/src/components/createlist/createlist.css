@@ -2,12 +2,44 @@
     background: #851A09;
     position: absolute;
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
-    align-items: center;
     margin-top: 10rem;
     margin-left: 26.5rem;
-    width: 50%;
-    height: 60%;
+    width: 1200px;
+    height: 750px;
+    left: 50px;
+    top: 8px;
+    
+    
     border-radius: 4%;
+}
+.savebutom{
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    left: 1060px;
+    top: 680px;
+
+background: #D14117;
+border-radius: 16px;
+}
+.titulo_input{
+    position: relative;
+    width: 1050px;
+    background: #B4FF8A;
+    height: 25px;
+}
+.descricao_input{
+    position: relative;
+    width: 1050px;
+    height: 200px;
+    background: #B4FF8A;
+}
+.tarefas_input{
+    position:relative;
+    left: 80px;
+}
+.titulo{
+    color: #3CFA4F;
 }
