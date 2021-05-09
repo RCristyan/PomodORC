@@ -7,15 +7,15 @@ function Createlist() {
         <form className="form" method="" action="/">
             <div className="titulo">
                 <p>Título:</p>
-                <input type="text" className="titulo_input"/>
+                <input type="text" className="titulo_input" value="texto de referencia p/titulo"/>
             </div>
             <div>
                 <p>Descrição:</p>
-                <input type="text" className="descricao_input" ></input>
+                <textarea className="descricao_input">texto de referencia p/descricao"</textarea>
             </div>
             <div>
                 <p>Tarefas:</p>
-                <input type="text" className="tarefas_input"/>
+                <input type="text" className="tarefas_input" value="Tarefa sendo criada"/>
             </div>
             <div>
                 <button type="button" className="savebutom" >Salvar</button> 

@@ -1,45 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+p{
+    font-size: 1.5em;
+    font-family: Roboto, sans-serif;
+    color: #3CFA4F;
+}
 .createlist{
     background: #851A09;
     position: absolute;
     display: flex;
-    align-items: top;
     justify-content: center;
     margin-top: 10rem;
-    margin-left: 26.5rem;
-    width: 1200px;
-    height: 750px;
-    left: 50px;
-    top: 8px;
-    
-    
+    margin-left: 30rem;
+    width: 75rem;
+    height: 46.875rem;
+    left: 3.125rem;
+    top: 0.5rem;
     border-radius: 4%;
 }
 .savebutom{
     position: absolute;
-    width: 120px;
-    height: 50px;
-    left: 1060px;
-    top: 680px;
-
-background: #D14117;
-border-radius: 16px;
+    width: 7.5rem;
+    height: 3.125rem;
+    left: 66.25rem;
+    top: 42.5rem;
+    background: #D14117;
+    border-radius: 1rem;
 }
 .titulo_input{
     position: relative;
-    width: 1050px;
+    width: 65.625rem;
     background: #B4FF8A;
-    height: 25px;
+    height: 2rem;
 }
 .descricao_input{
     position: relative;
-    width: 1050px;
-    height: 200px;
     background: #B4FF8A;
+    width: 65.625rem;
+    height: 11rem;
 }
 .tarefas_input{
     position:relative;
-    left: 80px;
-}
-.titulo{
-    color: #3CFA4F;
+    width: 15.438rem;
+    height: 2rem;
+    left: 6rem;
+    background: #B4FF8A;
 }
