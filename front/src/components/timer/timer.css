@@ -48,9 +48,16 @@
     fill: #5BED43;
 }
 
+.bar_arrow{
+    width: 1vw;
+    transform: rotate(90deg);
+    justify-content: flex-start;
+}
+
 .numbers{
     transform: translateY(8%);
     font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
     text-anchor: middle;
     font-size: 5.75rem;
     fill: #5BED43 ;
@@ -60,6 +67,7 @@
     color: #311E1B;
     font-family: 'Roboto', sans-serif;
     font-size: 1.33em;
+    font-weight: 600;
     text-align: start;
     align-self: flex-start;
 }
@@ -71,4 +79,11 @@
     padding: 5%;
     padding-top: 3%;
     align-self: center;
+}
+
+.timerBtns{
+    width: 15vw;
+    color: #5BED43;
+    display: flex;
+    justify-content: space-around;
 }

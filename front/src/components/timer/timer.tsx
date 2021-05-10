@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgressCircle from "./ProgressCircle";
 import ProgressBar from './ProgressBar';
+import CTimer from './CircleTimer';
 import './timer.css';
 
 function Timer() {
@@ -11,6 +12,7 @@ function Timer() {
       <div className="activityTitle">Tarefa1</div>
       <ProgressCircle 
         totaltime = {60}
+        time = {5}
         size = {320}
         strokeWidth = {5}
       />
@@ -18,8 +20,7 @@ function Timer() {
         totaltime={60}
       />
 
-      <div>
-        <button className="timerBtnStart">Iniciar</button>
+      <div className="timerBtns">
         <button className="timerBtnPause">Pausar</button>
         <button className="timerBtnStop">Parar</button>
       </div>

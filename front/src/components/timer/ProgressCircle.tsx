@@ -5,7 +5,8 @@ import React, { useEffect, useState, useRef } from 'react';
 const ProgressCircle = (props:any) =>{
     const{
         size, 
-        totaltime, 
+        totaltime,
+        time,
         strokeWidth,
     } = props;
 
@@ -13,38 +14,32 @@ const ProgressCircle = (props:any) =>{
     const radius= size/2 - strokeWidth/2;
     const circumference = radius*2*Math.PI;
 
-    let initial, totalsecs:number, perc, paused, mins:number, seconds:number;
+    const progress = (totaltime - time) / totaltime;
 
-    mins = 2;
-    totalsecs = 60;
-    seconds = 5;
-    /*setTimeout("decrementT()", 60);
+    /*
+    updateCountdown()
 
-    function setProgress(percent:number){
-        const offset = circumference - circumference*(percent/100);
-        const circle:any = document.querySelector(".progress_circle");
-        circle.style.strokeDashoffset = offset;
-    }
+    useEffect(() => {
+        const setCountdown = setInterval(() => {
+            updateCountdown()
+            const progressOffset = (progress)*circumference;
+            setOffset(progressOffset);
+        }, 1000);
+        return () => clearInterval(setCountdown);
+    }, [setOffset, circumference, progress, offset]);
 
-    function decrementT(){
-        ///mindiv.textContent = Math.floor(seconds/60);
-        ///secdiv.textContent = seconds % 60;
-
-        if(seconds > 0){
-            perc = Math.ceil(((totalsecs - seconds) / totalsecs)* 100);
-            setProgress(perc);
-            seconds--;
-            initial = window.setTimeout("decrementT()", 1000);
-        }else{
-            mins = 0;
-            seconds = 0;
+    function updateCountdown(){
+        if(time < 0){
+          time = totaltime
         }
+
+        time--;
+        ///console.log({time})
+        progress = (totaltime - time) / totaltime;
     }*/
 
-    let progress = (totalsecs - seconds) / totalsecs;
-
-    const [offset, setOffset] = useState(0);
     const circleRef = useRef(null);
+    const [offset, setOffset] = useState(0);
     useEffect(() => {
         const progressOffset = (progress)*circumference;
         setOffset(progressOffset);
@@ -58,7 +53,7 @@ const ProgressCircle = (props:any) =>{
                 cx={center} 
                 cy={center} 
                 r={radius}
-                stroke-width={strokeWidth}
+                strokeWidth={strokeWidth}
             >               
             </circle>
 
@@ -67,7 +62,7 @@ const ProgressCircle = (props:any) =>{
                 cx={center} 
                 cy={center} 
                 r={radius}
-                stroke-width={strokeWidth}
+                strokeWidth={strokeWidth}
                 strokeDasharray={circumference}
                 ref={circleRef}
                 strokeDashoffset={offset}

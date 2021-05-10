@@ -40,7 +40,6 @@
 }
 
 .sbLink{
-    background: #492f2b;
     height: auto;
     width: 100%;
     display: flex;
@@ -52,7 +51,7 @@
 }
 
 .sbLink:hover{
-    background: #D14117;
+    background: #492f2b;
     cursor: pointer;
 }
 
