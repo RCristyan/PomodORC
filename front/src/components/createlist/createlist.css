@@ -6,40 +6,55 @@
     justify-content: center;
     margin-top: 10rem;
     margin-left: 26.5rem;
-    width: 1200px;
-    height: 750px;
-    left: 50px;
-    top: 8px;
+    width: 75rem;
+    height: 46.875rem;
+    left: 3.125rem;
+    top: 0.5rem;
     
     
     border-radius: 4%;
 }
 .savebutom{
     position: absolute;
-    width: 120px;
-    height: 50px;
-    left: 1060px;
-    top: 680px;
+    width: 7.5rem;
+    height: 3.125rem;
+    left: 66.25rem;
+    top: 42.5rem;
 
 background: #D14117;
 border-radius: 16px;
 }
 .titulo_input{
     position: relative;
-    width: 1050px;
+    width: 65.625rem;
     background: #B4FF8A;
-    height: 25px;
+    height: 1.5625rem;
 }
 .descricao_input{
     position: relative;
-    width: 1050px;
-    height: 200px;
+    width: 65.625rem;
+    height: 12.5rem;
     background: #B4FF8A;
 }
 .tarefas_input{
     position:relative;
-    left: 80px;
+    left: 5rem;
+    background: #B4FF8A;
+    height: 1.5625rem;
+    left: 140px;
+    width: 300px;
 }
 .titulo{
     color: #3CFA4F;
+}
+.tarefas{
+    color: #3CFA4F;
+}
+.descricao{
+    color: #3CFA4F;
+}
+.black_plus{
+    position: relative;
+    top: -19.375rem;
+    left: 15.625rem;
 }
