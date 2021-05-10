@@ -8,7 +8,7 @@ function Sidebar() {
 
   return (
     <section className="sidebar">
-        <a href=""><img className = "plusIcon" src={icon}/></a>
+        <a href="/criarlista"><img className = "plusIcon" src={icon}/></a>
         
         <div className="sidebarLink">
             {SidebarData.map((item, index) => {

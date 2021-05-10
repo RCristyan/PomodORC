@@ -3,11 +3,13 @@
 .sidebar{
     background: #851A09;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 16.67vw;
     min-height: 80vh;
+    height: 100vh;
 }
 
 .plusIcon{
@@ -15,7 +17,10 @@
     cursor: pointer;
     width: 3vw;
 }
-
+.plusIcon:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
 .sidebarLink{
     justify-content: flex-start;
     align-items: center;
