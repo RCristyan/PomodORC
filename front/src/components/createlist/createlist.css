@@ -11,20 +11,13 @@ p{
     display: flex;
     justify-content: center;
     margin-top: 10rem;
-<<<<<<< HEAD
     margin-left: 26.5rem;
-=======
-    margin-left: 30rem;
->>>>>>> 0bc6e8b30ddb2544b679bd1f13d25c6d9140e112
     width: 75rem;
     height: 46.875rem;
     left: 3.125rem;
     top: 0.5rem;
-<<<<<<< HEAD
     
     
-=======
->>>>>>> 0bc6e8b30ddb2544b679bd1f13d25c6d9140e112
     border-radius: 4%;
 }
 .savebutom{
@@ -33,39 +26,26 @@ p{
     height: 3.125rem;
     left: 66.25rem;
     top: 42.5rem;
-<<<<<<< HEAD
 
 background: #D14117;
 border-radius: 16px;
-=======
-    background: #D14117;
-    border-radius: 1rem;
->>>>>>> 0bc6e8b30ddb2544b679bd1f13d25c6d9140e112
 }
 .titulo_input{
     position: relative;
     width: 65.625rem;
     background: #B4FF8A;
-<<<<<<< HEAD
     height: 1.5625rem;
 }
 .descricao_input{
     position: relative;
     width: 65.625rem;
     height: 12.5rem;
-=======
-    height: 2rem;
-}
-.descricao_input{
-    position: relative;
->>>>>>> 0bc6e8b30ddb2544b679bd1f13d25c6d9140e112
     background: #B4FF8A;
     width: 65.625rem;
     height: 11rem;
 }
 .tarefas_input{
     position:relative;
-<<<<<<< HEAD
     left: 5rem;
     background: #B4FF8A;
     height: 1.5625rem;
@@ -85,10 +65,4 @@ border-radius: 16px;
     position: relative;
     top: -19.375rem;
     left: 15.625rem;
-=======
-    width: 15.438rem;
-    height: 2rem;
-    left: 6rem;
-    background: #B4FF8A;
->>>>>>> 0bc6e8b30ddb2544b679bd1f13d25c6d9140e112
 }
