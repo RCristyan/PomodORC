@@ -2,19 +2,20 @@ import react from 'react';
 import "./timer.css";
 import React, { useEffect, useState, useRef } from 'react';
 
-const ProgressCircle = (props:any) =>{
-    const{
-        size, 
+const ProgressCircle = (props: any) => {
+    const {
+        size,
         totaltime,
-        time,
         strokeWidth,
+        timerSec,
+        timerMin
     } = props;
 
-    const center= size/2;
-    const radius= size/2 - strokeWidth/2;
-    const circumference = radius*2*Math.PI;
+    const center = size / 2;
+    const radius = size / 2 - strokeWidth / 2;
+    const circumference = radius * 2 * Math.PI;
 
-    const progress = (totaltime - time) / totaltime;
+    const progress = (totaltime - timerSec) / totaltime;
 
     /*
     updateCountdown()
@@ -41,11 +42,14 @@ const ProgressCircle = (props:any) =>{
     const circleRef = useRef(null);
     const [offset, setOffset] = useState(0);
     useEffect(() => {
-        const progressOffset = (progress)*circumference;
+        const progressOffset = (progress) * circumference;
         setOffset(progressOffset);
+        console.log(props)
     }, [setOffset, circumference, progress, offset]);
 
-    return(
+
+
+    return (
         <>
         <svg className="progress_circle" height="120" width="120">
             <circle 
@@ -69,10 +73,12 @@ const ProgressCircle = (props:any) =>{
             >           
             </circle>
 
-            <text className="numbers" x={center} y={center}>
-                00:00
-            </text>
-        </svg>
+                <text className="numbers" x={center} y={center}>
+                    {
+                        `${timerMin}:${timerSec}`
+                    }
+                </text>
+            </svg>
         </>
     );
 }
