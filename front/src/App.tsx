@@ -10,7 +10,7 @@ function App() {
     <div className="App">
 
       <Sidebar />
-      <Timer/>  
+      <Timer />  
       <Header />
     </div>
   );
