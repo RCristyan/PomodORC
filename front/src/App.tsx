@@ -10,7 +10,7 @@ function App() {
     <div className="App">
 
       <Sidebar />
-      <Timer/>  
+      <Timer listTitle="Lista1" activityTitle="Tarefa1" totaltime={300}/>  
       <Header />
     </div>
   );

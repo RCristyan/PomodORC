@@ -5,7 +5,7 @@ import React, { useEffect, useState, useRef } from 'react';
 const ProgressCircle = (props: any) => {
     const {
         size,
-        totaltime,
+        cycletime,
         strokeWidth,
         timerSec,
         timerMin
@@ -15,29 +15,8 @@ const ProgressCircle = (props: any) => {
     const radius = size / 2 - strokeWidth / 2;
     const circumference = radius * 2 * Math.PI;
 
-    const progress = (totaltime - timerSec) / totaltime;
-
-    /*
-    updateCountdown()
-
-    useEffect(() => {
-        const setCountdown = setInterval(() => {
-            updateCountdown()
-            const progressOffset = (progress)*circumference;
-            setOffset(progressOffset);
-        }, 1000);
-        return () => clearInterval(setCountdown);
-    }, [setOffset, circumference, progress, offset]);
-
-    function updateCountdown(){
-        if(time < 0){
-          time = totaltime
-        }
-
-        time--;
-        ///console.log({time})
-        progress = (totaltime - time) / totaltime;
-    }*/
+    let timeNow = timerMin*60 + timerSec;
+    const progress = (cycletime - timeNow) / cycletime;
 
     const circleRef = useRef(null);
     const [offset, setOffset] = useState(0);
@@ -75,7 +54,7 @@ const ProgressCircle = (props: any) => {
 
                 <text className="numbers" x={center} y={center}>
                     {
-                        `${timerMin}:${timerSec}`
+                        `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
                     }
                 </text>
             </svg>

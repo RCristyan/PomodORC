@@ -8,15 +8,12 @@ const ProgressBar = (props: any) => {
     const {
         totaltime,
         strokeWidth,
+        timerSec,
+        timerMin
     } = props;
 
-    let initial, totalsecs:number, paused, mins:number, seconds:number;
-
-    mins = 2;
-    totalsecs = 60;
-    seconds = 59;
-
-    let progress = (totalsecs - seconds) / totalsecs;
+    let timeNow = timerMin*60 + timerSec;
+    let progress = (totaltime - timeNow) / totaltime;
 
     const [offset, setOffset] = useState(0);
     const circleRef = useRef(null);
