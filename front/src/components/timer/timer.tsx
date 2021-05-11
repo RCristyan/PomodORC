@@ -6,7 +6,7 @@ function Timer() {
     <div className="timer">
         <div className="circle">
             <div className="numbers">
-                <h1>00:00</h1>
+                <p>00:00</p> 
             </div>
         </div>
     </div>
