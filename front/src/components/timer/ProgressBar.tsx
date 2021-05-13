@@ -8,9 +8,9 @@ const ProgressBar = (props:any) =>{
         strokeWidth,
     } = props;
 
-    const center= length/2;
-    const radius= length/2 - strokeWidth/2;
-    const circumference = radius*2*Math.PI;
+    // const center= length/2;
+    // const radius= length/2 - strokeWidth/2;
+    // const circumference = radius*2*Math.PI;
 
     let initial, totalsecs:number, perc, paused, mins:number, seconds:number;
 
@@ -22,10 +22,10 @@ const ProgressBar = (props:any) =>{
 
     const [offset, setOffset] = useState(0);
     const circleRef = useRef(null);
-    useEffect(() => {
-        const progressOffset = (progress)*400;
-        setOffset(progressOffset);
-    }, [setOffset, circumference, progress, offset]);
+    // useEffect(() => {
+    //     const progressOffset = (progress)*400;
+    //     setOffset(progressOffset);
+    // }, [setOffset, circumference, progress, offset]);
 
     return(
         <>

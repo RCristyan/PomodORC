@@ -14,9 +14,9 @@ function Timer() {
         size = {320}
         strokeWidth = {5}
       />
-      <ProgressBar 
+      {/* <ProgressBar 
         totaltime={60}
-      />
+      /> */}
 
       <div>
         <button className="timerBtnStart">Iniciar</button>
