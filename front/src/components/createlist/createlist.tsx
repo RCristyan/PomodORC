@@ -9,16 +9,16 @@ function Createlist() {
                 <section className="first_content">
                     <div className="title">
                         <p className="standardtext">Título:</p>
-                        <input type="text" className="title_input" value="texto de referencia p/titulo"/>
+                        <input type="text" className="title_input" placeholder="texto de referencia p/titulo"/>
                     </div>
                     <div className="description_conteiner">
                         <p className="standardtext">Descrição:</p>
-                        <textarea className="description_input">texto de referencia p/descricao"</textarea>
+                        <textarea className="description_input" placeholder="texto de referencia p/descricao"/>
                     </div>
                     <div className="tasks_conteiner">
                         <section className="task_first_conteiner">
                             <p className="standardtext">Tarefas:</p>
-                            <input type="text" className="task_input" value="Tarefa sendo criada"/>
+                            <input type="text" className="task_input" placeholder="texto de referencia p/tarefa"/>
                         </section>
                         <section className="task_second_conteiner">
                             <div className="plus">+</div>
