@@ -52,12 +52,12 @@ const ProgressCircle = (props: any) => {
             >           
             </circle>
 
-                <text className="numbers" x={center} y={center}>
-                    {
-                        `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
-                    }
-                </text>
-            </svg>
+            <text className="numbers" x={center} y={center}>
+                {
+                    `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
+                }
+            </text>
+        </svg>
         </>
     );
 }

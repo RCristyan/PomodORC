@@ -1,8 +1,8 @@
 import React from 'react';
 import './timer.css';
 
-function CTimer() {
-  const startHours = 0;
+function StopWatch() {
+  /*const startHours = 0;
   const startMinutes = 5;
   const startSeconds = 30;
 
@@ -23,11 +23,65 @@ function CTimer() {
   }
 
   updateCountdown()
-  const setCountdown = setInterval(updateCountdown, 1000);
+  const setCountdown = setInterval(updateCountdown, 1000);*/
+
+  const [timerMSec, setTimerMSec] = useState(0);
+  const [timerSec, setTimerSec] = useState(0);
+  const [timerMin, setTimerMin] = useState(0);
+  const [timerHour, setTimerHour] = useState(0);
+  const [isPause, setIsPause] = useState(true);
+
+  function reset() {
+    setTimerMSec(0);
+    setTimerSec(0);
+    setTimerMin(0);
+    setTimerHour(0);
+    setIsPause(true);
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if(isPause === false){
+        if (timerMSec < 999) {
+          setTimerMSec(timerMSec => timerMSec + 1);
+        } 
+        else if (timerMSec === 999) {
+          if(timerSec === 59){
+            setTimerSec(0);
+          } else{
+            setTimerSec(timerSec => timerSec + 1);
+          }
+          setTimerMSec(0);
+        }
+  
+        if (timerSec < 59) {
+          setTimerSec(timerSec => timerSec + 1);
+        } 
+        else if (timerSec === 59) {
+          if(timerMin === 59){
+            setTimerMin(0);
+          } else{
+            setTimerMin(timerMin => timerMin + 1);
+          }
+          setTimerSec(0);
+        }
+  
+        if (timerMin < 59) {
+          setTimerMin(timerMin => timerMin + 1);
+        } 
+        else if (timerSec === 59) {
+          setTimerHour(timerHour => timerHour + 1);
+          setTimerMin(0);
+        }
+      }
+      
+    }, 1);
+    return () => clearInterval(interval);
+  });
 
   return (
     time
   );
 }
 
-export default CTimer;
+export default StopWatch;

@@ -60,7 +60,8 @@
     font-weight: 100;
     text-anchor: middle;
     font-size: 5.75rem;
-    fill: #5BED43 ;
+    fill: #5BED43;
+    color: #5BED43;
 }
 
 .listTitle{
