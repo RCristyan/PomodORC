@@ -1,0 +1,121 @@
+.first_content{
+    width: 100%;
+}
+.standardtext{
+    font-size: 1.1rem;
+    font-family: Roboto, sans-serif;
+    color: #3CFA4F;
+}
+.createlist{
+    display: flex;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+.createlistcontainer{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    background-color: #851A09;
+    border-radius: 40px;
+}
+.createlistform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 1rem;
+}
+.title{
+    width: 100%;
+}
+.title_input{
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.5rem;
+    background-color: #B4FF8A;
+    padding-left: 0.5rem;
+    outline: none;
+    border: none;
+    color: #851A09;
+    font-size: 1rem;
+}
+.description_conteiner{
+    width: 100%;
+    margin-top: 1.2rem;
+}
+.description_input{
+    display: flex;
+    width: 100%;
+    height: 9rem;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    background-color: #B4FF8A;
+    padding-left: 0.5rem;
+    outline: none;
+    border: none;
+    color: #851A09;
+    font-size: 0.9rem;
+}
+.tasks_conteiner{
+    display: flex;
+    width: 100%;
+    margin-top: 1.2rem;
+}
+.task_first_conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.task_input{
+    display: flex;
+    align-self: center;
+    width: 55%;
+    height: 2rem;
+    margin-top: 0.5rem;
+    background-color: #B4FF8A;
+    padding-left: 0.5rem;
+    outline: none;
+    border: none;
+    color: #851A09;
+    font-size: 1rem;
+}
+.task_second_conteiner{
+    display: flex;
+    width: 50%;
+}
+.plus{
+    font-size: 3rem;
+}
+.plus:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.save_conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.savebutom{
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 5rem;
+    height: 1.8rem;
+    border-radius: 15px;
+    background-color: #D14117;
+    color: #B4FF8A;
+    outline: none;
+    border: none;
+}
+.savebutom:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+::placeholder{
+    color: #851A09;
+    font-size: 1rem;
+}

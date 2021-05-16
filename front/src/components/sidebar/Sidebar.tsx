@@ -9,7 +9,7 @@ import SubMenu from './SubMenu';
 function Sidebar() {
   return (
     <section className="sidebar">
-      <a href="">
+      <a href="/criarlista">
         <img className="plusIcon" src={icon} />
       </a>
 

@@ -2,18 +2,20 @@ import react from 'react';
 import "./timer.css";
 import React, { useEffect, useState, useRef } from 'react';
 
-const ProgressCircle = (props:any) =>{
-    const{
-        size, 
-        totaltime, 
+const ProgressCircle = (props: any) => {
+    const {
+        size,
+        totaltime,
         strokeWidth,
+        timerSec,
+        timerMin
     } = props;
 
-    const center= size/2;
-    const radius= size/2 - strokeWidth/2;
-    const circumference = radius*2*Math.PI;
+    const center = size / 2;
+    const radius = size / 2 - strokeWidth / 2;
+    const circumference = radius * 2 * Math.PI;
 
-    let initial, totalsecs:number, perc, paused, mins:number, seconds:number;
+    let initial, totalsecs: number, perc, paused, mins: number, seconds: number;
 
     mins = 2;
     totalsecs = 60;
@@ -46,38 +48,43 @@ const ProgressCircle = (props:any) =>{
     const [offset, setOffset] = useState(0);
     const circleRef = useRef(null);
     useEffect(() => {
-        const progressOffset = (progress)*circumference;
+        const progressOffset = (progress) * circumference;
         setOffset(progressOffset);
+        console.log(props)
     }, [setOffset, circumference, progress, offset]);
 
-    return(
+
+
+    return (
         <>
-        <svg className="progress_circle" height="120" width="120">
-            <circle 
-                className="bg_circle" 
-                cx={center} 
-                cy={center} 
-                r={radius}
-                stroke-width={strokeWidth}
-            >               
-            </circle>
+            <svg className="progress_circle" height="120" width="120">
+                <circle
+                    className="bg_circle"
+                    cx={center}
+                    cy={center}
+                    r={radius}
+                    stroke-width={strokeWidth}
+                >
+                </circle>
 
-            <circle 
-                className="circle" 
-                cx={center} 
-                cy={center} 
-                r={radius}
-                stroke-width={strokeWidth}
-                strokeDasharray={circumference}
-                ref={circleRef}
-                strokeDashoffset={offset}
-            >           
-            </circle>
+                <circle
+                    className="circle"
+                    cx={center}
+                    cy={center}
+                    r={radius}
+                    stroke-width={strokeWidth}
+                    strokeDasharray={circumference}
+                    ref={circleRef}
+                    strokeDashoffset={offset}
+                >
+                </circle>
 
-            <text className="numbers" x={center} y={center}>
-                00:00
-            </text>
-        </svg>
+                <text className="numbers" x={center} y={center}>
+                    {
+                        `${timerMin}:${timerSec}`
+                    }
+                </text>
+            </svg>
         </>
     );
 }
