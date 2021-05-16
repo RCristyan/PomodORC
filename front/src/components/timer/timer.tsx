@@ -39,9 +39,9 @@ function Timer() {
         timerSec={timerSec}
         timerMin={timerMin}
       />
-      <ProgressBar
+      {/* <ProgressBar 
         totaltime={60}
-      />
+      /> */}
 
       <div>
         <button className="timerBtnStart" onClick={() => { setIsPause(false) }}>Iniciar</button>
