@@ -79,3 +79,30 @@
     cursor: pointer;
     opacity: 0.8;
 }
+
+/* Style timer */
+.timer-content{
+    display: flex;
+    margin-top: 1rem;
+    background-color: #D14117;
+}
+.text-content{
+    display: flex;
+    width: 100%;
+}
+.title-timer{
+    width: 30%;
+    color: #3CFA4F;
+    font-size: 1.5em;
+}
+.title-plus{
+    width: 50%;
+    text-align: start;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #3CFA4F;
+}
+.input-timer-content{
+    width: 80%;
+    margin-top: 5%;
+}

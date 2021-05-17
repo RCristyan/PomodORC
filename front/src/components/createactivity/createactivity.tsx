@@ -15,6 +15,19 @@ function Createactivity() {
                         <p className="standardtext">Descrição:</p>
                         <textarea className="description_input" placeholder="texto de referencia p/descricao"/>
                     </div>
+                    <div className="timer-content">
+                        <div className="text-content">
+                            <div className="title-timer">
+                                <p>Timer</p>
+                            </div>
+                            <div className="title-plus">
+                                <p>+</p>
+                            </div>
+                        </div>
+                        <div className="input-timer-content">
+                            <input className="input-timer" type="time" value="00:00"/> 
+                        </div>
+                    </div>
                 </section>
                 <div className="save_conteiner">
                     <a href="/"><button type="button" className="savebutom" >Salvar</button></a> 
