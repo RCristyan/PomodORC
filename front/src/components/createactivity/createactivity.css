@@ -112,6 +112,14 @@
     border: none;
     color: #3CFA4F;
     font-family: roboto,sans-serif;
+
+}
+.input-timer::-webkit-calendar-picker-indicator{
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+}
+.input-timer:hover{
+    cursor: pointer;
+    text-decoration: none;
 }
 a:visited{
     text-decoration: none;

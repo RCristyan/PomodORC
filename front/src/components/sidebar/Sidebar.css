@@ -69,3 +69,6 @@
     display: flex;
     margin-top: 2rem;
 }
+a:visited{
+    color: #5BED43;
+}
