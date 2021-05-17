@@ -16,6 +16,9 @@ function Createactivity() {
                         <textarea className="description_input" placeholder="texto de referencia p/descricao"/>
                     </div>
                 </section>
+                <div className="save_conteiner">
+                    <a href="/"><button type="button" className="savebutom" >Salvar</button></a> 
+                </div>
             </form>
         </section>
     </div>
