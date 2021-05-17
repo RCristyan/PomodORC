@@ -21,7 +21,7 @@ function Createlist() {
                             <input type="text" className="task_input" placeholder="texto de referencia p/tarefa"/>
                         </section>
                         <section className="task_second_conteiner">
-                            <div className="plus">+</div>
+                            <div className="plus"><a href="/">+</a></div>
                         </section>
                     </div>
                 </section>

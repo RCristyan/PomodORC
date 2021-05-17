@@ -89,10 +89,13 @@
 }
 .plus{
     font-size: 3rem;
+    text-decoration: none;
+    color: black;
 }
 .plus:hover{
     cursor: pointer;
     opacity: 0.8;
+    text-decoration: none;
 }
 .save_conteiner{
     display: flex;
@@ -118,4 +121,14 @@
 ::placeholder{
     color: #851A09;
     font-size: 1rem;
+}
+
+/*estilizar links*/
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    text-decoration: none;
+    color: black;
 }
