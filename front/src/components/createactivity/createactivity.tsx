@@ -21,11 +21,11 @@ function Createactivity() {
                                 <p>Timer</p>
                             </div>
                             <div className="title-plus">
-                                <p>+</p>
+                                <a href=""><p>+</p></a>
                             </div>
                         </div>
                         <div className="input-timer-content">
-                            <input className="input-timer" type="time" value="00:00"/> 
+                            <input className="input-timer" type="time"/> 
                         </div>
                     </div>
                 </section>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 .createactivity{
     display: flex;
     width: 100%;
@@ -84,7 +85,6 @@
 .timer-content{
     display: flex;
     margin-top: 1rem;
-    background-color: #D14117;
 }
 .text-content{
     display: flex;
@@ -96,13 +96,26 @@
     font-size: 1.5em;
 }
 .title-plus{
-    width: 50%;
     text-align: start;
     font-weight: bold;
     font-size: 2rem;
-    color: #3CFA4F;
 }
 .input-timer-content{
     width: 80%;
-    margin-top: 5%;
+    border: none;
+}
+.input-timer{
+    height: 6rem;
+    width: 15rem;
+    font-size: 4rem;
+    background-color: #851A09;
+    border: none;
+    color: #3CFA4F;
+    font-family: roboto,sans-serif;
+}
+a:visited{
+    text-decoration: none;
+    color: #3CFA4F;;
+    font-weight: bold;
+    font-size: 2rem;
 }
