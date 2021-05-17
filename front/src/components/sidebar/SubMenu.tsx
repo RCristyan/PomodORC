@@ -16,7 +16,7 @@ function SubMenu({ item }: any) {
       {subnav && item.subNav.map((item: any, index: any) => {
         return (
           <a className="sbLink" href={item.path} onClick={item.subNav && showSubNav}>
-            <div>
+            <div className="arrow-edit">
               <img className="sbListIcon" src={item.icon} />
               <div>{item.title}</div>
             </div>
