@@ -5,7 +5,7 @@ import React, { useEffect, useState, useRef } from 'react';
 const ProgressCircle = (props: any) => {
     const {
         size,
-        totaltime,
+        cycletime,
         strokeWidth,
         timerSec,
         timerMin
@@ -15,38 +15,11 @@ const ProgressCircle = (props: any) => {
     const radius = size / 2 - strokeWidth / 2;
     const circumference = radius * 2 * Math.PI;
 
-    let initial, totalsecs: number, perc, paused, mins: number, seconds: number;
+    let timeNow = timerMin*60 + timerSec;
+    const progress = (cycletime - timeNow) / cycletime;
 
-    mins = 2;
-    totalsecs = 60;
-    seconds = 5;
-    /*setTimeout("decrementT()", 60);
-
-    function setProgress(percent:number){
-        const offset = circumference - circumference*(percent/100);
-        const circle:any = document.querySelector(".progress_circle");
-        circle.style.strokeDashoffset = offset;
-    }
-
-    function decrementT(){
-        ///mindiv.textContent = Math.floor(seconds/60);
-        ///secdiv.textContent = seconds % 60;
-
-        if(seconds > 0){
-            perc = Math.ceil(((totalsecs - seconds) / totalsecs)* 100);
-            setProgress(perc);
-            seconds--;
-            initial = window.setTimeout("decrementT()", 1000);
-        }else{
-            mins = 0;
-            seconds = 0;
-        }
-    }*/
-
-    let progress = (totalsecs - seconds) / totalsecs;
-
-    const [offset, setOffset] = useState(0);
     const circleRef = useRef(null);
+    const [offset, setOffset] = useState(0);
     useEffect(() => {
         const progressOffset = (progress) * circumference;
         setOffset(progressOffset);
@@ -57,34 +30,34 @@ const ProgressCircle = (props: any) => {
 
     return (
         <>
-            <svg className="progress_circle" height="120" width="120">
-                <circle
-                    className="bg_circle"
-                    cx={center}
-                    cy={center}
-                    r={radius}
-                    stroke-width={strokeWidth}
-                >
-                </circle>
+        <svg className="progress_circle" height="120" width="120">
+            <circle 
+                className="bg_circle" 
+                cx={center} 
+                cy={center} 
+                r={radius}
+                strokeWidth={strokeWidth}
+            >               
+            </circle>
 
-                <circle
-                    className="circle"
-                    cx={center}
-                    cy={center}
-                    r={radius}
-                    stroke-width={strokeWidth}
-                    strokeDasharray={circumference}
-                    ref={circleRef}
-                    strokeDashoffset={offset}
-                >
-                </circle>
+            <circle 
+                className="circle" 
+                cx={center} 
+                cy={center} 
+                r={radius}
+                strokeWidth={strokeWidth}
+                strokeDasharray={circumference}
+                ref={circleRef}
+                strokeDashoffset={offset}
+            >           
+            </circle>
 
-                <text className="numbers" x={center} y={center}>
-                    {
-                        `${timerMin}:${timerSec}`
-                    }
-                </text>
-            </svg>
+            <text className="numbers" x={center} y={center}>
+                {
+                    `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
+                }
+            </text>
+        </svg>
         </>
     );
 }

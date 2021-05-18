@@ -69,53 +69,43 @@
     fill: #5BED43;
 }
 
+.bar_arrow{
+    width: 1vw;
+    transform: rotate(90deg);
+    justify-content: flex-start;
+}
+
 .numbers{
     transform: translateY(8%);
     font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
     text-anchor: middle;
     font-size: 5.75rem;
-    fill: #5BED43 ;
+    fill: #5BED43;
+    color: #5BED43;
 }
-.buttons{
+
+.listTitle{
+    color: #311E1B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.33em;
+    font-weight: 600;
+    text-align: start;
+    align-self: flex-start;
+}
+
+.activityTitle{
+    color: #5BED43;
+    font-family: Roboto;
+    font-size: 2em;
+    padding: 5%;
+    padding-top: 3%;
+    align-self: center;
+}
+
+.timerBtns{
+    width: 15vw;
+    color: #5BED43;
     display: flex;
-    flex-direction: inline;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin-top: 1rem;
-}
-.timerBtnStart{
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 4px;
-    margin-right: 1rem;
-    background-color: #321612;
-    color: #3CFA4F;
-    outline: none;
-    border: none;
-}
-.timerBtnPause{
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 4px;
-    margin-right: 1rem;
-    background-color: #321612;
-    color: #3CFA4F;
-    outline: none;
-    border: none;
-}
-.timerBtnStop{
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 4px;
-    margin-right: 1rem;
-    background-color: #321612;
-    color: #3CFA4F;
-    outline: none;
-    border: none;
-}
-.timerBtnPause:hover, .timerBtnStart:hover, .timerBtnStop:hover{
-    cursor: pointer;
-    opacity: 0.7;
+    justify-content: space-around;
 }

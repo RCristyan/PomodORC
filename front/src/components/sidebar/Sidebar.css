@@ -56,8 +56,8 @@
 }
 
 .sbLink:hover{
+    background: #492f2b;
     cursor: pointer;
-    background: #4f3327;
 }
 
 .sbListIcon{
