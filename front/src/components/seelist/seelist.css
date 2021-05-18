@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 70%;
     background-color: #4f3327;
     border-radius: 40px;
 }
@@ -46,11 +46,73 @@
 }
 .section-description{
     width: 90%;
+    height: 50%;
 }
 .description-container{
     margin-top: 2rem;
     color: #3CFA4F;
 }
-.description-container h1{
+.standard-description{
+    font-size: 1.6rem;
+    color: #3CFA4F;
+    margin-bottom: 1.5rem;
+}
+.lista-tarefas-container{
+    display: flex;
+    width:90%;
+    height: 18rem;
+}
+.container-tarefas{
+    display: flex;
+    flex-direction: column;
+}
+.title-tarefas{
     margin-bottom: 1rem;
+}
+.standard-tarefas{
+    font-size: 1.6rem;
+    color: #3CFA4F;
+    margin-bottom: 1.5rem;
+}
+.listagem{
+    margin-left: 5rem;
+    color: #3CFA4F;
+}
+.plus{
+    height:20%;
+    margin-left: 8rem;
+}
+.plus:hover{
+    opacity: 0.3;
+}
+.content-tarefas{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.tarefas{
+    margin-left:1rem;
+}
+.arrow-img{
+    width: 1rem;
+}
+.save_conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.savebutom{
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 5rem;
+    height: 1.8rem;
+    border-radius: 15px;
+    background-color: #D14117;
+    color: #B4FF8A;
+    outline: none;
+    border: none;
+}
+.savebutom:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
