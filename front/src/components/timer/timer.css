@@ -1,15 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 .timer{
     display: flex;
-    flex-direction: column;
+    position: fixed;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    width: 100%;
+    margin-top: 15rem;
     transform: translateY(-10%);
-    margin-top: 10rem;
-    margin-left: 45%;
 }
-
+.timer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-right: 20rem;
+}
+.listTitle{
+    text-align: start;
+    margin-right: 10rem;
+    color: #311E1B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.35em;
+}
+.activityTitle{
+    color: #5BED43;
+    font-family: Roboto;
+    font-size: 2em;
+    align-self: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
 .progress_circle{
     width: 20rem;
     height: 20rem;
@@ -35,8 +57,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    /* padding-top: 5%;
+    padding-bottom: 5%; */
 }
 
 .bg_bar{
@@ -54,20 +76,46 @@
     font-size: 5.75rem;
     fill: #5BED43 ;
 }
-
-.listTitle{
-    color: #311E1B;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.33em;
-    text-align: start;
-    align-self: flex-start;
+.buttons{
+    display: flex;
+    flex-direction: inline;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
 }
-
-.activityTitle{
-    color: #5BED43;
-    font-family: Roboto;
-    font-size: 2em;
-    padding: 5%;
-    padding-top: 3%;
-    align-self: center;
+.timerBtnStart{
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    background-color: #321612;
+    color: #3CFA4F;
+    outline: none;
+    border: none;
+}
+.timerBtnPause{
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    background-color: #321612;
+    color: #3CFA4F;
+    outline: none;
+    border: none;
+}
+.timerBtnStop{
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    background-color: #321612;
+    color: #3CFA4F;
+    outline: none;
+    border: none;
+}
+.timerBtnPause:hover, .timerBtnStart:hover, .timerBtnStop:hover{
+    cursor: pointer;
+    opacity: 0.7;
 }

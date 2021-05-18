@@ -11,7 +11,6 @@
     min-height: 80vh;
     height: 100vh;
 }
-
 .plusIcon{
     padding: 20%;
     cursor: pointer;
@@ -34,13 +33,14 @@
 }
 
 .sbDropdown{
+    display: flex;
     justify-content: flex-start;
     color: #5BED43;
     text-decoration: none;
 }
 
 .sbDropdown:hover{
-    background: #492f2b;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -56,10 +56,19 @@
 }
 
 .sbLink:hover{
-    background: #492f2b;
     cursor: pointer;
+    background: #4f3327;
 }
 
 .sbListIcon{
-    width: .75vw;
+    margin-right: 0.6rem;
+    width: .6rem;
+    height: 1.2rem;
+}
+.arrow-edit{
+    display: flex;
+    margin-top: 2rem;
+}
+a:visited{
+    color: #5BED43;
 }

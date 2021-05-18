@@ -1,26 +1,19 @@
-.first_content{
-    width: 100%;
-}
-.standardtext{
-    font-size: 1.1rem;
-    font-family: Roboto, sans-serif;
-    color: #3CFA4F;
-}
-.createlist{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.createactivity{
     display: flex;
     width: 100%;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     justify-content: center;
 }
-.createlistcontainer{
+.createactivitycontainer{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 70%;
     background-color: #851A09;
     border-radius: 40px;
 }
-.createlistform{
+.createactivityform{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,13 +21,21 @@
     width: 90%;
     padding-top: 1rem;
 }
+.first-content{
+    width: 100%;
+}
 .title{
     width: 100%;
+}
+.standardtext{
+    font-size: 1.3rem;
+    font-family: Roboto, sans-serif;
+    color: #3CFA4F;
 }
 .title_input{
     display: flex;
     width: 100%;
-    height: 2rem;
+    height: 2.5rem;
     margin-top: 0.5rem;
     background-color: #B4FF8A;
     padding-left: 0.5rem;
@@ -45,7 +46,7 @@
 }
 .description_conteiner{
     width: 100%;
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
 }
 .description_input{
     display: flex;
@@ -57,45 +58,6 @@
     padding-left: 0.5rem;
     outline: none;
     border: none;
-    color: #851A09;
-    font-size: 0.9rem;
-}
-.tasks_conteiner{
-    display: flex;
-    width: 100%;
-    margin-top: 1.2rem;
-}
-.task_first_conteiner{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-.task_input{
-    display: flex;
-    align-self: center;
-    width: 55%;
-    height: 2rem;
-    margin-top: 0.5rem;
-    background-color: #B4FF8A;
-    padding-left: 0.5rem;
-    outline: none;
-    border: none;
-    color: #851A09;
-    font-size: 1rem;
-}
-.task_second_conteiner{
-    display: flex;
-    width: 50%;
-}
-.plus{
-    font-size: 3rem;
-    text-decoration: none;
-    color: black;
-}
-.plus:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    text-decoration: none;
 }
 .save_conteiner{
     display: flex;
@@ -118,17 +80,57 @@
     opacity: 0.8;
 }
 
-::placeholder{
-    color: #851A09;
-    font-size: 1rem;
+/* Style timer */
+.timer-content{
+    display: flex;
+    margin-top: 1rem;
 }
-
-/*estilizar links*/
-a:link{
+.text-content{
+    display: flex;
+    width: 100%;
+}
+.title-timer{
+    width: 30%;
+    color: #3CFA4F;
+    font-size: 1.5em;
+}
+.title-plus-dump{
+    display: flex;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.input-timer-content{
+    justify-content: start;
+    border: none;
+    width: 100%;
+}
+.input-timer{
+    height: 6rem;
+    width: 15rem;
+    font-size: 4rem;
+    margin-left: 5rem;
+    background-color: #851A09;
+    border: none;
+    outline: none;
+    color: #3CFA4F;
+    font-family: roboto, sans-serif;
+}
+.input-timer::-webkit-calendar-picker-indicator{
+    filter: blur(100px);
+}
+.input-timer:hover{
+    cursor: pointer;
     text-decoration: none;
-    color: black;
 }
 a:visited{
     text-decoration: none;
-    color: black;
+    color: #3CFA4F;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.icon-dum{
+    margin-left: 1rem;
+}
+img{
+    width: 5%;
 }

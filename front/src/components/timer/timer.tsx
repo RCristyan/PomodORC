@@ -30,25 +30,26 @@ function Timer() {
 
   return (
     <div className="timer">
-      <div className="listTitle">Lista1</div>
-      <div className="activityTitle">Tarefa1</div>
-      <ProgressCircle
-        totaltime={60}
-        size={320}
-        strokeWidth={5}
-        timerSec={timerSec}
-        timerMin={timerMin}
-      />
-      {/* <ProgressBar 
-        totaltime={60}
-      /> */}
+      <section className="timer-content">
+        <div className="listTitle">Lista1</div>
+        <div className="activityTitle">Tarefa1</div>
+        <ProgressCircle
+          totaltime={60}
+          size={320}
+          strokeWidth={5}
+          timerSec={timerSec}
+          timerMin={timerMin}
+        />
+        {/* <ProgressBar 
+          totaltime={60}
+        /> */}
 
-      <div>
-        <button className="timerBtnStart" onClick={() => { setIsPause(false) }}>Iniciar</button>
-        <button className="timerBtnPause" onClick={reset}>Reiniciar</button>
-        <button className="timerBtnStop" onClick={() => { setIsPause(true) }}>Parar</button>
-      </div>
-
+        <div className="buttons">
+          <button className="timerBtnStart" onClick={() => { setIsPause(false) }}>Iniciar</button>
+          <button className="timerBtnPause" onClick={reset}>Reiniciar</button>
+          <button className="timerBtnStop" onClick={() => { setIsPause(true) }}>Parar</button>
+        </div>
+      </section>
     </div>
   );
 }
