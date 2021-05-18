@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProgressCircle from "./ProgressCircle";
 import ProgressBar from './ProgressBar';
-import CTimer from './CircleTimer';
 import './timer.css';
 
 function Timer(props: any) {
@@ -12,7 +11,7 @@ function Timer(props: any) {
   } = props;
 
   let mode = "rest";
-  let cycletime = mode == "rest" ? 5 : 25;
+  let cycletime = mode === "rest" ? 5 : 25;
 
   const [timerSec, setTimerSec] = useState(0);
   const [timerMin, setTimerMin] = useState(cycletime);
