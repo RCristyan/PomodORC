@@ -1,14 +1,27 @@
 import react from 'react';
 import './seelist.css';
-import {SidebarData} from '../sidebar/SidebarData'
+import {Seelistdata} from '../seelist/seelistdata';
+import ListarTarefas from './seelistmen';
+import iconEdit from '../../assets/icon_edit.svg';
+import iconDump from '../../assets/icon_dump.png';
 
-function Seelist(){
+function Seelist(props:any){
+    const {
+        title
+    } = props;
+
     return(
         <div className="seelist">
             <section className="seelistcontainer">
-            <p>Lista 1</p>
-            <p>Descrição</p>
-            <p>texto de referencia p/ descricao</p>
+                <div className="title-lista">
+                    {title}
+                </div>
+                <div className="icons">
+                    <a href=""><img src={iconEdit} alt="Editar lista" /></a>
+                    <a href=""><img src={iconDump} alt="Deletar lista" /></a>
+                </div>
+                {/* menu de tarefas */}
+                <ListarTarefas item={Seelistdata}/>
             </section>
         </div>
     )

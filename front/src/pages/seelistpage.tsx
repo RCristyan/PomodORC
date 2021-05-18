@@ -4,7 +4,7 @@ import Seelist from '../components/seelist/seelist';
 function SeeListPage() {
   return (
     <div className="seelist">
-      <Seelist />
+      <Seelist title="Lista 1"/>
     </div>
   );
 }
