@@ -1,4 +1,5 @@
 import React from 'react';
+import icon from '../../assets/icon_dump.png';
 import './createactivity.css';
 
 function Createactivity() {
@@ -20,8 +21,11 @@ function Createactivity() {
                             <div className="title-timer">
                                 <p>Timer</p>
                             </div>
-                            <div className="title-plus">
+                            <div className="title-plus-dump">
                                 <a href=""><p>+</p></a>
+                                <div className="icon-dum">
+                                    <a href=""><img src={icon} alt="lixeira deletar tarefa" /></a>
+                                </div>
                             </div>
                         </div>
                         <div className="input-timer-content">
