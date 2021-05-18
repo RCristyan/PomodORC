@@ -1,0 +1,31 @@
+.header{
+    display: flex;
+    position: absolute;
+    height: 7rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-self: flex-start;
+    align-items: center;
+    font-family: 'Rhodium Libre', serif;
+    font-size: 3em;
+    text-align: end;
+}
+.h1{
+    color: #311E1B;
+}
+
+.h2{
+    color: #5BED43;
+}
+
+.h3{
+    color: #5BED43;
+    font-size: 1.8em;
+    font-family: 'Questrial', sans-serif;
+}
+
+.icon{
+    padding: 1%;
+    justify-self: right;
+    width: 7vw;
+}

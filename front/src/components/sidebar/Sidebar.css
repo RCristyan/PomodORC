@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.sidebar{
+    background: #311E1B;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 16.67vw;
+    min-height: 80vh;
+    height: 100vh;
+}
+.plusIcon{
+    padding: 20%;
+    cursor: pointer;
+    width: 3vw;
+}
+.plusIcon:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.sidebarLink{
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5%;
+    width: 90%;
+    list-style: none;
+    text-decoration: none;
+    height: 8vh;
+    font-size: 1.5em;
+    font-family: Roboto;
+}
+
+.sbDropdown{
+    display: flex;
+    justify-content: flex-start;
+    color: #5BED43;
+    text-decoration: none;
+}
+
+.sbDropdown:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.sbLink{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #5BED43;
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.sbLink:hover{
+    cursor: pointer;
+    background: #4f3327;
+}
+
+.sbListIcon{
+    margin-right: 0.6rem;
+    width: .6rem;
+    height: 1.2rem;
+}
+.arrow-edit{
+    display: flex;
+    margin-top: 2rem;
+}
+a:visited{
+    color: #5BED43;
+}
