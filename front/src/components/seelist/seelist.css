@@ -1,0 +1,49 @@
+.seelist{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.seelistcontainer{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    background-color: #4f3327;
+    border-radius: 40px;
+}
+.all-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.title-container{
+    display: flex;
+    width: 50%;
+    height: 10%;
+    background-color: lawngreen;
+}
+.standardtitle{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #3CFA4F;
+}
+.icons-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 10%;
+    background-color: lightblue;
+}
+.edit-icon{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    width: 2rem;
+}
+.dump-icon{
+    margin-top: 1rem;
+    width: 2rem;
+}
+.description-container{
+    background-color: khaki;
+}
