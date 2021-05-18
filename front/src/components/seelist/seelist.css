@@ -7,43 +7,50 @@
 }
 .seelistcontainer{
     display: flex;
-    justify-content: center;
-    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
     background-color: #4f3327;
     border-radius: 40px;
 }
-.all-container{
+.section-title-icon{
     display: flex;
-    flex-direction: column;
-    width: 90%;
+    justify-content: center;
+    width: 100%;
 }
 .title-container{
-    display: flex;
-    width: 50%;
-    height: 10%;
-    background-color: lawngreen;
+    width: 80%;
 }
 .standardtitle{
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #3CFA4F;
 }
 .icons-container{
     display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    height: 10%;
-    background-color: lightblue;
+}
+.container-edit-icon{
+    margin-right: 1rem;
+    text-align: end;
 }
 .edit-icon{
+    width: 1.9rem;
     margin-top: 1rem;
-    margin-right: 1rem;
-    width: 2rem;
+}
+.container-dump-icon{
+    text-align: end;
 }
 .dump-icon{
+    width: 1.9rem;
     margin-top: 1rem;
-    width: 2rem;
+}
+.section-description{
+    width: 90%;
 }
 .description-container{
-    background-color: khaki;
+    margin-top: 2rem;
+    color: #3CFA4F;
+}
+.description-container h1{
+    margin-bottom: 1rem;
 }
