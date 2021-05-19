@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './createlist.css';
+import axios from 'axios';
 
 function Createlist() {
+
     return (
         <div className="createlist">
             <section className="createlistcontainer">
@@ -9,11 +11,11 @@ function Createlist() {
                     <section className="first_content">
                         <div className="title">
                             <p className="standardtext">Título:</p>
-                            <input type="text" className="title_input" placeholder="texto de referencia p/titulo" />
+                            <input type="text" className="title_input" placeholder="Insira um título para a lista" />
                         </div>
                         <div className="description_conteiner">
                             <p className="standardtext">Descrição:</p>
-                            <textarea className="description_input" placeholder="texto de referencia p/descricao" />
+                            <textarea className="description_input" placeholder="Insira uma descrição para a lista" />
                         </div>
                         <div className="tasks_conteiner">
                             <section className="task_first_conteiner">

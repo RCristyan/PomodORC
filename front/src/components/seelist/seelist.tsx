@@ -2,12 +2,21 @@ import './seelist.css';
 import iconEdit from '../../assets/icon_edit.svg';
 import iconDump from '../../assets/icon_dump.png';
 import ListarTarefas from './seelistscroll';
-import { Seelistdata } from './seelistdata';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-function Seelist(props: any) {
-    const {
-        title
-    } = props;
+function Seelist() {
+
+    const [listTitle, setListTitle] = useState([]);
+
+    useEffect(() => {
+
+        axios.get(`http://localhost:5000/api/read`).then(res => {
+            const list = res.data;
+            setListTitle(list);
+        })
+    })
+
 
     return (
         <div className="seelist">
@@ -15,17 +24,16 @@ function Seelist(props: any) {
                 <section className="section-title-icon">
                     {/* container do titulo */}
                     <div className="title-container">
-                        <div className="standardtitle">{title}</div>
+                        <div className="standardtitle">
+                            <ListarTarefas items={listTitle} />
+                        </div>
                     </div>
-
                     {/* conteiner dos icones */}
                     <div className="icons-container">
-
                         {/* icone de edicao */}
                         <div className="container-edit-icon">
                             <a href=""><img className="edit-icon" src={iconEdit} alt="Editar lista" /></a>
                         </div>
-
                         {/* icone de lixeira */}
                         <div className="container-dump-icon">
                             <a href=""><img className="dump-icon" src={iconDump} alt="Deletar lista" /></a>
@@ -36,7 +44,6 @@ function Seelist(props: any) {
                     {/* descricao */}
                     <div className="description-container">
                         <p className="standard-description">Descrição</p>
-                        <p>titulo referente p/ Descrição</p>
                     </div>
                 </section>
 
@@ -46,7 +53,7 @@ function Seelist(props: any) {
                         <div className="standard-tarefas">Tarefas</div>
                         {/* lista de tarefas */}
                         <div className="listagem">
-                            <ListarTarefas item={Seelistdata} />
+                            Tarefinahs
                         </div>
                     </div>
                     {/* plus icon de adicionar tarefas */}
