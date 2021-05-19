@@ -67,7 +67,7 @@
 .lista-tarefas-container{
     display: flex;
     width:90%;
-    height: 18rem;
+    height: 17rem;
 }
 .container-tarefas{
     display: flex;
@@ -84,6 +84,12 @@
 .listagem{
     margin-left: 5rem;
     color: #3CFA4F;
+    min-height: 1rem;
+    max-height: 4rem;
+    overflow-y: scroll;
+}
+.listagem::-webkit-scrollbar {
+    color: #3CFA4F;
 }
 .plus{
     height:20%;
@@ -94,17 +100,15 @@
 }
 .content-tarefas{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width:100%;
 }
 .tarefas{
-    margin-left:1rem;
+    padding-right: 1rem;
     height:1rem;
-    min-height: 1rem;
-    overflow-y: scroll;
-}
+} 
 .arrow-img{
-    width: 1rem;
+    width: 0rem;
 }
 .save_conteiner{
     display: flex;

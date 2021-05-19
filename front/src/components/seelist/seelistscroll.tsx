@@ -14,7 +14,7 @@ function ListarTarefas({ item }: any) {
                   <img className="arrow-img" src={icon} alt="" />
                 </div>
                 <div className="tarefas">
-                  <p>{item.title1}</p>
+                  <p>{item.title}</p>
                 </div>
               </>
           );
