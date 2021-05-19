@@ -2,11 +2,7 @@ import { Document, Schema, model } from 'mongoose';
 interface IList extends Document {
   title: string,
   body: string,
-  activities: [{
-    name: string,
-    number: number,
-    status: boolean,
-  }]
+  activities: string[],
 }
 
 const ListSchema = new Schema<IList>({
@@ -19,9 +15,8 @@ const ListSchema = new Schema<IList>({
     type: String
   },
   activities: [{
-    name: { type: String },
-    number: { type: Number, required: true },
-    status: { type: Boolean }
+    type: Schema.Types.ObjectId,
+    ref: 'Activities'
   }]
 });
 
