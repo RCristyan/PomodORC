@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProgressCircle from "./ProgressCircle";
 import ProgressBar from './ProgressBar';
-import CTimer from './CircleTimer';
 import './timer.css';
 
 function StopWatch(props:any) {

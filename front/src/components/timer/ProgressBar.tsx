@@ -8,12 +8,11 @@ const ProgressBar = (props: any) => {
     const {
         totaltime,
         strokeWidth,
-        timerSec,
-        timerMin
+        timeNow
     } = props;
 
-    let timeNow = timerMin*60 + timerSec;
-    let progress = (totaltime - timeNow) / totaltime;
+    ///let timeNow = timerMin*60 + timerSec;
+    let progress = 1 - ((totaltime - timeNow) / totaltime);
 
     const barRef:any = useRef(null);
     const [offset, setOffset] = useState(0);
@@ -22,6 +21,7 @@ const ProgressBar = (props: any) => {
         const progressOffset = (progress) * 400;
         setOffset(progressOffset);
         barRef.current.style = 'transition: width 2s ease-out;';
+        console.log({timeNow})
     }, [setOffset, progress, offset]);
 
     return (
