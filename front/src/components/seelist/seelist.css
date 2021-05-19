@@ -4,6 +4,7 @@
     width: 100%;
     margin-top: 5rem;
     margin-bottom: 2rem;
+    
 }
 .seelistcontainer{
     display: flex;
@@ -37,12 +38,18 @@
     width: 1.9rem;
     margin-top: 1rem;
 }
+.edit-icon:hover{
+    opacity: 0.5;
+}
 .container-dump-icon{
     text-align: end;
 }
 .dump-icon{
     width: 1.9rem;
     margin-top: 1rem;
+}
+.dump-icon:hover{
+    opacity: 0.5;
 }
 .section-description{
     width: 90%;
@@ -92,6 +99,9 @@
 }
 .tarefas{
     margin-left:1rem;
+    height:1rem;
+    min-height: 1rem;
+    overflow-y: scroll;
 }
 .arrow-img{
     width: 1rem;

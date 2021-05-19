@@ -1,11 +1,11 @@
 export const Seelistdata = [
     {
-        title1: "Tarefa existente 1",
+        title: "Tarefa existente 1",
     },
     {
-        title2: "Tarefa existente 2",
+        title: "Tarefa existente 2",
     },
     {
-        title3: "Tarefa existente 3",
+        title: "Tarefa existente 3",
     },
 ]

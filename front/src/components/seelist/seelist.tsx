@@ -45,7 +45,7 @@ function Seelist(props:any){
                     <div className="container-tarefas">
                         {/* titulo tarefas */}
                         <div className="standard-tarefas">Tarefas</div>
-                        {/* menu de tarefas */}
+                        {/* lista de tarefas */}
                         <div className="listagem">
                             <ListarTarefas item={Seelistdata}/>   
                         </div>
