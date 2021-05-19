@@ -1,6 +1,8 @@
 import './seelist.css';
 import iconEdit from '../../assets/icon_edit.svg';
 import iconDump from '../../assets/icon_dump.png';
+import ListarTarefas from './seelistscroll';
+import { Seelistdata } from './seelistdata';
 
 function Seelist(props: any) {
     const {
@@ -44,7 +46,7 @@ function Seelist(props: any) {
                         <div className="standard-tarefas">Tarefas</div>
                         {/* lista de tarefas */}
                         <div className="listagem">
-                            <ListarTarefas item={Seelistdata}/>   
+                            <ListarTarefas item={Seelistdata} />
                         </div>
                     </div>
                     {/* plus icon de adicionar tarefas */}
@@ -53,7 +55,7 @@ function Seelist(props: any) {
                     </div>
                 </section>
                 <div className="save_conteiner">
-                    <a href="/"><button type="button" className="savebutom" >Salvar</button></a> 
+                    <a href="/"><button type="button" className="savebutom" >Salvar</button></a>
                 </div>
             </section>
         </div>
