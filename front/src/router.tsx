@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 //import React, { Component } from "react"
+>>>>>>> e3df1d4dd6ddeefc5ef414b4680be7a22522a603
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";

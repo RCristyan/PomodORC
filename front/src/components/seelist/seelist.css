@@ -4,46 +4,129 @@
     width: 100%;
     margin-top: 5rem;
     margin-bottom: 2rem;
+    
 }
 .seelistcontainer{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 70%;
     background-color: #4f3327;
     border-radius: 40px;
 }
-.all-container{
+.section-title-icon{
     display: flex;
-    flex-direction: column;
-    width: 90%;
+    justify-content: center;
+    width: 100%;
 }
 .title-container{
-    display: flex;
-    width: 50%;
-    height: 10%;
-    background-color: lawngreen;
+    width: 80%;
 }
 .standardtitle{
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #3CFA4F;
 }
 .icons-container{
     display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    height: 10%;
-    background-color: lightblue;
+}
+.container-edit-icon{
+    margin-right: 1rem;
+    text-align: end;
 }
 .edit-icon{
+    width: 1.9rem;
     margin-top: 1rem;
-    margin-right: 1rem;
-    width: 2rem;
+}
+.edit-icon:hover{
+    opacity: 0.5;
+}
+.container-dump-icon{
+    text-align: end;
 }
 .dump-icon{
+    width: 1.9rem;
     margin-top: 1rem;
-    width: 2rem;
+}
+.dump-icon:hover{
+    opacity: 0.5;
+}
+.section-description{
+    width: 90%;
+    height: 50%;
 }
 .description-container{
-    background-color: khaki;
+    margin-top: 2rem;
+    color: #3CFA4F;
+}
+.standard-description{
+    font-size: 1.6rem;
+    color: #3CFA4F;
+    margin-bottom: 1.5rem;
+}
+.lista-tarefas-container{
+    display: flex;
+    width:90%;
+    height: 17rem;
+}
+.container-tarefas{
+    display: flex;
+    flex-direction: column;
+}
+.title-tarefas{
+    margin-bottom: 1rem;
+}
+.standard-tarefas{
+    font-size: 1.6rem;
+    color: #3CFA4F;
+    margin-bottom: 1.5rem;
+}
+.listagem{
+    margin-left: 5rem;
+    color: #3CFA4F;
+    min-height: 1rem;
+    max-height: 4rem;
+    overflow-y: scroll;
+}
+.listagem::-webkit-scrollbar {
+    color: #3CFA4F;
+}
+.plus{
+    height:20%;
+    margin-left: 8rem;
+}
+.plus:hover{
+    opacity: 0.3;
+}
+.content-tarefas{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.tarefas{
+    padding-right: 1rem;
+    height:1rem;
+} 
+.arrow-img{
+    width: 0rem;
+}
+.save_conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.savebutom{
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 5rem;
+    height: 1.8rem;
+    border-radius: 15px;
+    background-color: #D14117;
+    color: #B4FF8A;
+    outline: none;
+    border: none;
+}
+.savebutom:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
