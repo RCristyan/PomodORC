@@ -15,11 +15,13 @@ const ProgressBar = (props: any) => {
     let timeNow = timerMin*60 + timerSec;
     let progress = (totaltime - timeNow) / totaltime;
 
+    const barRef:any = useRef(null);
     const [offset, setOffset] = useState(0);
-    const circleRef = useRef(null);
+    
     useEffect(() => {
         const progressOffset = (progress) * 400;
         setOffset(progressOffset);
+        barRef.current.style = 'transition: width 2s ease-out;';
     }, [setOffset, progress, offset]);
 
     return (
@@ -32,7 +34,9 @@ const ProgressBar = (props: any) => {
 
                 <rect
                     className="bar"
-                    rx="2.5" ry="2.5" width={offset} height="5"
+                    rx="2.5" ry="2.5" 
+                    width={offset} height="5"
+                    ref={barRef}
                 />
 
             </svg>

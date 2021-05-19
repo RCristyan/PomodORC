@@ -13,7 +13,9 @@ function Timer(props:any) {
 
   let mode = "rest";
   let cycletime = mode == "rest" ? 5 : 25;
+  let cycles = totaltime/3600;
 
+  ///const [timeNow, setTimeNow] = useState(totaltime);
   const [timerSec, setTimerSec] = useState(0);
   const [timerMin, setTimerMin] = useState(cycletime);
   const [isPause, setIsPause] = useState(true);
@@ -26,16 +28,20 @@ function Timer(props:any) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (timerSec > 0 && isPause === false) {
-        setTimerSec(timerSec => timerSec - 1);
-      } else if (timerSec === 0) {
-        if(timerMin === 0){
-          clearInterval(interval);
-        } else{
-          setTimerMin(timerMin => timerMin - 1);
-          setTimerSec(59);
+      if(isPause === false){
+        ///setTimeNow(timeNow => timeNow - 1);
+        
+        if (timerSec > 0) {
+          setTimerSec(timerSec => timerSec - 1);
+        } else if (timerSec === 0) {
+          if(timerMin === 0){
+            clearInterval(interval);
+          } else{
+            setTimerMin(timerMin => timerMin - 1);
+            setTimerSec(59);
+          }
         }
-      }
+      }     
     }, 1000);
     return () => clearInterval(interval);
   });
@@ -54,15 +60,13 @@ function Timer(props:any) {
       />
       <ProgressBar
         totaltime={totaltime}
-        strokeWidth={5}
         timerSec={timerSec}
         timerMin={timerMin}
       />
 
       <div className="timerBtns">
-        <button className="timerBtnStart" onClick={() => { setIsPause(false) }}>Iniciar</button>
-        <button className="timerBtnPause" onClick={reset}>Reiniciar</button>
-        <button className="timerBtnStop" onClick={() => { setIsPause(true) }}>Parar</button>
+        <button className="timerBtn" onClick={() => {setIsPause(!isPause)}}>{isPause ? "Retomar" : "Pausar"}</button>
+        <button className="timerBtn" onClick={reset}>Reiniciar</button>       
       </div>
 
     </div>
@@ -70,3 +74,4 @@ function Timer(props:any) {
 }
 
 export default Timer;
+///<button className="timerBtnStop" onClick={() => { setIsPause(true) }}>Parar</button>

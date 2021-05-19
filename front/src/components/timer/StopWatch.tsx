@@ -11,8 +11,8 @@ function StopWatch(props:any) {
     } = props;
 
     const [timerMSec, setTimerMSec] = useState(0);
-    const [timerSec, setTimerSec] = useState(50);
-    const [timerMin, setTimerMin] = useState(59);
+    const [timerSec, setTimerSec] = useState(0);
+    const [timerMin, setTimerMin] = useState(0);
     const [timerHour, setTimerHour] = useState(0);
     const [isPause, setIsPause] = useState(true);
   
@@ -63,11 +63,11 @@ function StopWatch(props:any) {
 
 
   return (
-    <div className="timer">
+    <div className="stopwatch">
       <div className="listTitle">{listTitle}</div>
       <div className="activityTitle">{activityTitle}</div>
     
-      <div className="numbers">
+      <div className="sw_numbers">
              {
                 `${timerHour < 10 ? "0" + timerHour : timerHour}:${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? 
                     "0" + timerSec : timerSec}:${timerMSec < 10 ? "0" + timerMSec : timerMSec}`
@@ -75,9 +75,8 @@ function StopWatch(props:any) {
       </div>
 
       <div className="timerBtns">
-        <button className="timerBtnStart" onClick={() => { setIsPause(false) }}>Iniciar</button>
-        <button className="timerBtnPause" onClick={reset}>Reiniciar</button>
-        <button className="timerBtnStop" onClick={() => { setIsPause(true) }}>Parar</button>
+        <button className="timerBtn" onClick={() => {setIsPause(!isPause)}}>{isPause ? "Retomar" : "Pausar"}</button>
+        <button className="timerBtn" onClick={reset}>Reiniciar</button>       
       </div>
 
     </div>

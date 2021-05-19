@@ -18,12 +18,12 @@ const ProgressCircle = (props: any) => {
     let timeNow = timerMin*60 + timerSec;
     const progress = (cycletime - timeNow) / cycletime;
 
-    const circleRef = useRef(null);
+    const circleRef:any = useRef(null);
     const [offset, setOffset] = useState(0);
     useEffect(() => {
         const progressOffset = (progress) * circumference;
         setOffset(progressOffset);
-        console.log(props)
+        circleRef.current.style = 'transition: stroke-dashoffset 2s ease-out;';
     }, [setOffset, circumference, progress, offset]);
 
 
@@ -54,7 +54,7 @@ const ProgressCircle = (props: any) => {
 
             <text className="numbers" x={center} y={center}>
                 {
-                    `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
+                 `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
                 }
             </text>
         </svg>

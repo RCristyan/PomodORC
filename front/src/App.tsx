@@ -5,7 +5,7 @@ import Timer from './components/timer/timer';
 import StopWatch from './components/timer/StopWatch';
 import './App.css';
 
-///
+///<Timer listTitle="Lista1" activityTitle="Tarefa1" totaltime={300}/>
 ///<StopWatch listTitle="Lista1" activityTitle="Tarefa1"/>
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
 
       <Sidebar />
-      <Timer listTitle="Lista1" activityTitle="Tarefa1" totaltime={300}/>
+      <StopWatch listTitle="Lista1" activityTitle="Tarefa1"/>
       <Header />
     </div>
   );
