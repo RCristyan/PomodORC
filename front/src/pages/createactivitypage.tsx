@@ -1,4 +1,3 @@
-import React from "react";
 import Createactivity from "../components/createactivity/createactivity";
 
 function CreateActivityPage() {

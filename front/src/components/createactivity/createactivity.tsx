@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import icon from '../../assets/icon_dump.png';
 import './createactivity.css';
 
 function Createactivity() {
+
     return (
         <div className="createactivity">
             <section className="createactivitycontainer">
@@ -9,7 +11,7 @@ function Createactivity() {
                     <section className="first-content">
                         <div className="title">
                             <p className="standardtext">Título:</p>
-                            <input type="text" className="title_input" placeholder="texto de referencia p/titulo" />
+                            <input type="text" className="title_input" placeholder="Insira um Título para sua lista" />
                         </div>
                         <div className="description_conteiner">
                             <p className="standardtext">Descrição:</p>

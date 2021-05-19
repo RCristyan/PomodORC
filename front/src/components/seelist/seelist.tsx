@@ -1,16 +1,13 @@
-import react from 'react';
 import './seelist.css';
-import {Seelistdata} from '../seelist/seelistdata';
-import ListarTarefas from './seelistscroll';
 import iconEdit from '../../assets/icon_edit.svg';
 import iconDump from '../../assets/icon_dump.png';
 
-function Seelist(props:any){
+function Seelist(props: any) {
     const {
         title
     } = props;
 
-    return(
+    return (
         <div className="seelist">
             <section className="seelistcontainer">
                 <div className="all-container">
