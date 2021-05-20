@@ -1,34 +1,85 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './createlist.css';
-import axios from 'axios';
+import api from '../../services/api';
 
 function Createlist() {
 
+    const [newTitle, setNewTitle] = useState('');
+    const [newBody, setNewBody] = useState('');
+
+    const newList = async (title: string, body: string) => {
+        try {
+            await api.post('/create', {
+                title: title,
+                body: body,
+            });
+            window.location.reload();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    console.log(newTitle);
+
     return (
+
         <div className="createlist">
             <section className="createlistcontainer">
-                <form className="createlistform" method="" action="/">
+                <form
+                    className="createlistform"
+                    method=""
+                >
                     <section className="first_content">
                         <div className="title">
-                            <p className="standardtext">Título:</p>
-                            <input type="text" className="title_input" placeholder="Insira um título para a lista" />
+                            <p className="standardtext">
+                                Título:
+                                </p>
+                            <input
+                                type="text"
+                                className="title_input"
+                                placeholder="Insira um título para a lista"
+                                value={newTitle}
+                                onChange={(event) => {
+                                    setNewTitle(event.target.value)
+                                }}
+                            />
                         </div>
                         <div className="description_conteiner">
                             <p className="standardtext">Descrição:</p>
-                            <textarea className="description_input" placeholder="Insira uma descrição para a lista" />
+                            <textarea
+                                className="description_input"
+                                placeholder="Insira uma descrição para a lista"
+                                value={newBody}
+                                onChange={(event) => {
+                                    setNewBody(event.target.value);
+                                }}
+                            />
                         </div>
                         <div className="tasks_conteiner">
                             <section className="task_first_conteiner">
                                 <p className="standardtext">Tarefas:</p>
-                                <input type="text" className="task_input" placeholder="texto de referencia p/tarefa" />
+                                <input
+                                    type="text"
+                                    className="task_input"
+                                    placeholder="texto de referencia p/tarefa"
+                                />
                             </section>
                             <section className="task_second_conteiner">
-                                <div className="plus"><a href="/">+</a></div>
+                                <div className="plus">
+                                    <a href="/">
+                                        +
+                                        </a>
+                                </div>
                             </section>
                         </div>
                     </section>
                     <div className="save_conteiner">
-                        <a href="/"><button type="button" className="savebutom" >Salvar</button></a>
+                        <button
+                            type="submit"
+                            className="savebutom"
+                            onClick={() => { newList(newTitle, newBody) }}
+                        >
+                            Salvar
+                                </button>
                     </div>
                 </form>
             </section>

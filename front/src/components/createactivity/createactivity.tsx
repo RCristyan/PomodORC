@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import icon from '../../assets/icon_dump.png';
 import './createactivity.css';
 
@@ -23,9 +22,9 @@ function Createactivity() {
                                     <p>Timer</p>
                                 </div>
                                 <div className="title-plus-dump">
-                                    <a href=""><p>+</p></a>
+                                    <a href="a"><p>+</p></a>
                                     <div className="icon-dum">
-                                        <a href=""><img src={icon} alt="lixeira deletar tarefa" /></a>
+                                        <a href="a"><img src={icon} alt="lixeira deletar tarefa" /></a>
                                     </div>
                                 </div>
                             </div>

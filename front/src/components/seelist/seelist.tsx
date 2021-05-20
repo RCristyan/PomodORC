@@ -2,8 +2,8 @@ import './seelist.css';
 import iconEdit from '../../assets/icon_edit.svg';
 import iconDump from '../../assets/icon_dump.png';
 import ListarTarefas from './seelistscroll';
-import axios from 'axios';
 import { useState, useEffect } from 'react';
+import api from '../../services/api';
 
 function Seelist() {
 
@@ -11,7 +11,7 @@ function Seelist() {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:5000/api/read`).then(res => {
+        api.get(`/read`).then(res => {
             const list = res.data;
             setListTitle(list);
         })
@@ -32,11 +32,11 @@ function Seelist() {
                     <div className="icons-container">
                         {/* icone de edicao */}
                         <div className="container-edit-icon">
-                            <a href=""><img className="edit-icon" src={iconEdit} alt="Editar lista" /></a>
+                            <a href="a"><img className="edit-icon" src={iconEdit} alt="Editar lista" /></a>
                         </div>
                         {/* icone de lixeira */}
                         <div className="container-dump-icon">
-                            <a href=""><img className="dump-icon" src={iconDump} alt="Deletar lista" /></a>
+                            <a href="a"><img className="dump-icon" src={iconDump} alt="Deletar lista" /></a>
                         </div>
                     </div>
                 </section>
