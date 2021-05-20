@@ -44,7 +44,7 @@ function Createlist() {
                         </div>
                         <div className="description_conteiner">
                             <p className="standardtext">Descrição:</p>
-                            <textarea
+                            <input
                                 className="description_input"
                                 placeholder="Insira uma descrição para a lista"
                                 value={newBody}

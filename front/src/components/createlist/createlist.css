@@ -21,6 +21,7 @@
 .createlistcontainer{
     display: flex;
     justify-content: center;
+    margin-top: 10rem;
     width: 80%;
     background-color: #311E1B;
     border-radius: 40px;
@@ -106,6 +107,7 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    margin-top: 7rem;
 }
 .savebutom{
     margin-bottom: 1rem;
@@ -124,8 +126,8 @@
 }
 
 ::placeholder{
-    color: #311E1B;
-    font-size: 1rem;
+    color: #851A09;
+    font-size: 0.9rem;
 }
 
 /*estilizar links*/
