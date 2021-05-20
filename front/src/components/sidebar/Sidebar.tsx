@@ -21,9 +21,11 @@ function Sidebar() {
 
   return (
     <section className="sidebar">
+      <div className="plus-content">
       <a href="/criarlista">
         <img className="plusIcon" src={icon} />
       </a>
+      </div>
       <div className="sidebarLink">
         <SubMenu items={listTitle} />
       </div>

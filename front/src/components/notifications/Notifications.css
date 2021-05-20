@@ -1,8 +1,8 @@
 .notificationWrapper{
-    position: fixed;
-    top: 2%;
-    right: 2%;
+    position:fixed;
     width: 20vw;
+    top: 10rem;
+    margin-left: 15rem;
 }
 
 .notificationItem{
