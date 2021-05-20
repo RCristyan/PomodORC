@@ -11,13 +11,13 @@ const Routes = () => {
     return (
         <Router>
             <Sidebar />
-            <Header />
             <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/criarlista' exact component={createlist} />
                 <Route path='/criartarefa' exact component={CreateActivityPage} />
                 <Route path='/verlista' exact component={SeeListPage} />
             </Switch>
+            <Header />
         </Router>
     );
 };

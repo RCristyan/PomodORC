@@ -4,7 +4,7 @@ import Timer from "../components/timer/timer";
 function Home() {
   return (
     <div className="Home">
-      <Timer totaltime={0}/>
+      <Timer listTitle = "Lista1" activityTitle="Tarefa1" totaltime={10}/>
     </div>
   );
 }
