@@ -14,9 +14,7 @@ function App() {
   return (
     <div className="App">
       <Routes />
-      <Sidebar />
-      <Timer listTitle="Lista1" activityTitle="Tarefa1" totaltime={2520}/>
-      <Header />
+      {/* <Timer listTitle="Lista1" activityTitle="Tarefa1" totaltime={2520}/> */}
     </div>
   );
 }

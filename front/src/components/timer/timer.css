@@ -6,8 +6,9 @@
     position: fixed;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 15rem;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 10rem;
     transform: translateY(-10%);
 }
 .timer-content{
@@ -19,21 +20,7 @@
     width: 100%;
     margin-right: 20rem;
 }
-.listTitle{
-    text-align: start;
-    margin-right: 10rem;
-    color: #311E1B;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.35em;
-}
-.activityTitle{
-    color: #5BED43;
-    font-family: Roboto;
-    font-size: 2em;
-    align-self: center;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-}
+
 .progress_circle{
     width: 20rem;
     height: 20rem;
@@ -41,7 +28,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .circle{
     transform-origin: center;
     transform: rotate(-90deg);
@@ -59,8 +45,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding-top: 5%;
-    padding-bottom: 5%; */
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .bg_bar{
@@ -88,45 +74,47 @@
 }
 
 .listTitle{
+    text-align: start;
+    align-self: center;
+    transform: translateX(-7.5vw);
     color: #311E1B;
     font-family: 'Roboto', sans-serif;
     font-size: 1.33em;
     font-weight: 600;
-    text-align: start;
-    align-self: flex-start;
 }
 
 .activityTitle{
+    align-self: center;
     color: #5BED43;
     font-family: Roboto;
     font-size: 2em;
-    padding: 5%;
-    padding-top: 3%;
-    align-self: center;
+    padding: 2%;
+    padding-top: 0.5%;
 }
 
 .timerBtns{
-    width: 20vw;
-    color: #5BED43;
     display: flex;
     justify-content: space-around;
+    width: 20vw;
+    color: #5BED43;
 }
 
 .timerBtn{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     background-color: #311E1B; /* Green */
     border: none;
     border-radius: 25px;
     color: #5BED43;
     padding: 4% 8%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: .95em;
     font-family: Roboto;
     font-weight: 600;
 }
 
 .timerBtn:hover{
+    box-shadow: 2px 2px 10px #311E1B;
     cursor: pointer;
 }
 
