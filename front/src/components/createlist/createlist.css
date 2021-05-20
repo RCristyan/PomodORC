@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     width: 80%;
-    background-color: #851A09;
+    background-color: #311E1B;
     border-radius: 40px;
 }
 .createlistform{
@@ -120,7 +120,7 @@
 
 ::placeholder{
     color: #851A09;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /*estilizar links*/
