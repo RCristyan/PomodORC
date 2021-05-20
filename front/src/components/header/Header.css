@@ -1,6 +1,5 @@
 .header{
     display: flex;
-    position: absolute;
     height: 7rem;
     width: 100%;
     justify-content: flex-end;

@@ -29,9 +29,9 @@ function Createlist() {
                 >
                     <section className="first_content">
                         <div className="title">
-                            <p className="standardtext">
+                            <h1 className="standardtext">
                                 Título:
-                                </p>
+                                </h1>
                             <input
                                 type="text"
                                 className="title_input"
@@ -78,7 +78,7 @@ function Createlist() {
                             onClick={() => { newList(newTitle, newBody) }}
                         >
                             Salvar
-                                </button>
+                        </button>
                     </div>
                 </form>
             </section>

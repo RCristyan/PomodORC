@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 .createactivity{
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    width: 75%;
+    height: 12vh;
+    margin-top: 16%;
+    margin-left: 15vw;
 }
 .createactivitycontainer{
     display: flex;
     justify-content: center;
     width: 70%;
-    background-color: #851A09;
+    background-color: #311E1B;
     border-radius: 40px;
 }
 .createactivityform{
@@ -30,7 +34,7 @@
 .standardtext{
     font-size: 1.3rem;
     font-family: Roboto, sans-serif;
-    color: #3CFA4F;
+    color: #5BED43;
 }
 .title_input{
     display: flex;
@@ -41,7 +45,7 @@
     padding-left: 0.5rem;
     outline: none;
     border: none;
-    color: #851A09;
+    color: #311E1B;
     font-size: 1rem;
 }
 .description_conteiner{
@@ -70,7 +74,7 @@
     width: 5rem;
     height: 1.8rem;
     border-radius: 15px;
-    background-color: #D14117;
+    background-color: #492f2b;
     color: #B4FF8A;
     outline: none;
     border: none;
@@ -91,7 +95,7 @@
 }
 .title-timer{
     width: 30%;
-    color: #3CFA4F;
+    color: #5BED43;
     font-size: 1.5em;
 }
 .title-plus-dump{
@@ -109,10 +113,10 @@
     width: 15rem;
     font-size: 4rem;
     margin-left: 5rem;
-    background-color: #851A09;
+    background-color: #311E1B;
     border: none;
     outline: none;
-    color: #3CFA4F;
+    color: #5BED43;
     font-family: roboto, sans-serif;
 }
 .input-timer::-webkit-calendar-picker-indicator{
@@ -124,7 +128,7 @@
 }
 a:visited{
     text-decoration: none;
-    color: #3CFA4F;
+    color: #5BED43;
     font-weight: bold;
     font-size: 2rem;
 }

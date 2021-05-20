@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import icon from '../../assets/icon_plus.png';
 import './Sidebar.css';
 import SubMenu from './SubMenu';
-import api from '../../services/api'
+import api from '../../services/api';
 
 function Sidebar() {
 

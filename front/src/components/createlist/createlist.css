@@ -2,22 +2,27 @@
     width: 100%;
 }
 .standardtext{
-    font-size: 1.1rem;
+    font-size: 8px;
     font-family: Roboto, sans-serif;
     color: #3CFA4F;
+    font-weight: normal;
 }
 .createlist{
     display: flex;
-    width: 100%;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
     justify-content: center;
+    width: 75%;
+    height: 12vh;
+    margin-top: 16%;
+    margin-left: 15vw;
 }
 .createlistcontainer{
     display: flex;
     justify-content: center;
     width: 80%;
-    background-color: #851A09;
+    background-color: #311E1B;
     border-radius: 40px;
 }
 .createlistform{
@@ -40,7 +45,7 @@
     padding-left: 0.5rem;
     outline: none;
     border: none;
-    color: #851A09;
+    color: #311E1B;
     font-size: 1rem;
 }
 .description_conteiner{
@@ -57,7 +62,7 @@
     padding-left: 0.5rem;
     outline: none;
     border: none;
-    color: #851A09;
+    color: #311E1B;
     font-size: 0.9rem;
 }
 .tasks_conteiner{
@@ -80,7 +85,7 @@
     padding-left: 0.5rem;
     outline: none;
     border: none;
-    color: #851A09;
+    color: #311E1B;
     font-size: 1rem;
 }
 .task_second_conteiner{
@@ -108,8 +113,8 @@
     width: 5rem;
     height: 1.8rem;
     border-radius: 15px;
-    background-color: #D14117;
-    color: #B4FF8A;
+    background-color: #492f2b;
+    color: #3CFA4F;
     outline: none;
     border: none;
 }
@@ -119,7 +124,7 @@
 }
 
 ::placeholder{
-    color: #851A09;
+    color: #311E1B;
     font-size: 1rem;
 }
 
