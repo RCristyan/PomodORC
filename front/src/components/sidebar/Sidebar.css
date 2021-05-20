@@ -42,7 +42,8 @@
 }
 
 .sbDropdown:hover{
-    box-shadow: 1px 6px 10px #674D41;
+    box-shadow: 0px 1px 10px #674D41;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -58,7 +59,7 @@
 }
 
 .sbLink:hover{
-    background: #492f2b;
+    opacity: 0.5;
     cursor: pointer;
 }
 
