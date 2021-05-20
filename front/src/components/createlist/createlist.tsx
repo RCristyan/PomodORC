@@ -44,7 +44,7 @@ function Createlist() {
                         </div>
                         <div className="description_conteiner">
                             <p className="standardtext">Descrição:</p>
-                            <input
+                            <textarea
                                 className="description_input"
                                 placeholder="Insira uma descrição para a lista"
                                 value={newBody}
@@ -59,7 +59,7 @@ function Createlist() {
                                 <input
                                     type="text"
                                     className="task_input"
-                                    placeholder="texto de referencia p/tarefa"
+                                    placeholder="Titulo da tarefa"
                                 />
                             </section>
                             <section className="task_second_conteiner">

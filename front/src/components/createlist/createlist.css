@@ -1,30 +1,21 @@
-.first_content{
-    width: 100%;
-}
-.standardtext{
-    font-size: 8px;
-    font-family: Roboto, sans-serif;
-    color: #3CFA4F;
-    font-weight: normal;
-}
+/* principais conteiners */
 .createlist{
     display: flex;
+    position:  fixed;
     flex-direction: column;
-    position: fixed;
     align-items: center;
     justify-content: center;
-    width: 75%;
-    height: 12vh;
-    margin-top: 16%;
-    margin-left: 15vw;
+    top: 7rem;
+    width: 80%;
+    margin-left: 10%;
 }
 .createlistcontainer{
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
-    width: 80%;
+    width: 70%;
     background-color: #311E1B;
     border-radius: 40px;
+    margin-left: 5rem;
 }
 .createlistform{
     display: flex;
@@ -33,6 +24,17 @@
     justify-content: space-between;
     width: 90%;
     padding-top: 1rem;
+}
+.first_content{
+    width: 100%;
+}
+
+/* conteiner de titulo */
+.standardtext{
+    font-size: 8px;
+    font-family: Roboto, sans-serif;
+    color: #3CFA4F;
+    font-weight: normal;
 }
 .title{
     width: 100%;
@@ -49,6 +51,8 @@
     color: #311E1B;
     font-size: 1rem;
 }
+
+/* conteiner de descricao */
 .description_conteiner{
     width: 100%;
     margin-top: 1.2rem;
@@ -65,7 +69,10 @@
     border: none;
     color: #311E1B;
     font-size: 0.9rem;
+    resize: none;
 }
+
+/* conteiner de inserir tarefas */
 .tasks_conteiner{
     display: flex;
     width: 100%;
@@ -89,9 +96,11 @@
     color: #311E1B;
     font-size: 1rem;
 }
+
+/* conteiner do plus */
 .task_second_conteiner{
     display: flex;
-    width: 50%;
+    width: 10%;
 }
 .plus{
     font-size: 3rem;
@@ -103,6 +112,8 @@
     opacity: 0.8;
     text-decoration: none;
 }
+
+/* Botao de salvar */
 .save_conteiner{
     display: flex;
     width: 100%;
@@ -125,6 +136,7 @@
     opacity: 0.8;
 }
 
+/* placeholders  */
 ::placeholder{
     color: #851A09;
     font-size: 0.9rem;

@@ -1,12 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import icon from '../../assets/icon_dump.png';
 import './createactivity.css';
 import api from '../../services/api';
+import ListarTarefas from '../seelist/seelistscroll'
 
 function Createactivity() {
 
     const [newName, setNewName] = useState('');
     const [idList, setIdList] = useState('');
+    const [lists, setLists] = useState([]);
+
+    useEffect(() => {
+
+        api.get(`/read`).then(res => {
+          const listA = res.data;
+          setLists(listA);
+        })
+      });
 
     const newActivity = async (name: string, id:string) => {
         try {
@@ -19,6 +29,7 @@ function Createactivity() {
         }
     }
 
+
     return (
         <div className="createactivity">
             <section className="createactivitycontainer">
@@ -29,15 +40,12 @@ function Createactivity() {
                 >
                     <section className="first-content">
                         <div className="title">
-                            <p className="standardtext">Nome da Lista:</p>
-                            <input type="text" 
-                                className="title_input" 
-                                placeholder="Insira a lista em que deseja adicionar atividade" 
-                                value= {idList}
-                                onChange= {(event) =>{
-                                    setIdList(event.target.value)
-                                }}
-                            />
+                            <p className="standardtext">Minhas Listas:</p>
+                            <div>
+                                <ListarTarefas 
+                                    items={lists}
+                                />
+                            </div>
                         </div>
                         <div className="description_conteiner">
                             <p className="standardtext">Nome da Atividade:</p>

@@ -59,7 +59,7 @@ function Seelist() {
                         <div className="standard-tarefas">Tarefas</div>
                         {/* lista de tarefas */}
                         <div className="listagem">
-                            Tarefinahs
+                            
                         </div>
                     </div>
                     {/* plus icon de adicionar tarefas */}
