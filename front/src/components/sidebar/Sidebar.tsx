@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import { useState, useEffect } from 'react';
-import icon from '../../assets/icon_plus.png';
+import icon from '../../assets/icon_plus.svg';
 import './Sidebar.css';
 import SubMenu from './SubMenu';
-import api from '../../services/api'
+import api from '../../services/api';
 
 function Sidebar() {
 

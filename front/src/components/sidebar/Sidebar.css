@@ -12,10 +12,12 @@
     height: 100vh;
 }
 .plusIcon{
-    padding: 20%;
+    fill: #5BED43;
+    color: #5BED43;
+    padding: 10%;
+    padding-left: 15%;
     cursor: pointer;
-    width: 2.5vw;
-    border-radius: 40px;
+    width: 3vw;
     margin-bottom: 1rem;
 }
 .plusIcon:hover{
@@ -66,8 +68,7 @@
 .sbListIcon{
     margin-top: 0.25rem;
     margin-right: 0.6rem;
-    width: .6rem;
-    height: 1.2rem;
+    width: 1vw;
 }
 .arrow-edit{
     display: flex;
