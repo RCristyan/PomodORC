@@ -14,11 +14,10 @@
 .plusIcon{
     fill: #5BED43;
     color: #5BED43;
-    padding: 20%;
+    padding: 10%;
     padding-left: 15%;
     cursor: pointer;
-    width: 2.5vw;
-    border-radius: 40px;
+    width: 3vw;
     margin-bottom: 1rem;
 }
 .plusIcon:hover{
