@@ -45,7 +45,7 @@ function Timer(props:any) {
   const [timerMin, setTimerMin] = useState(cycles > 0 ? cycletime : Math.floor(extraTime/60));
 
   const [isPause, setIsPause] = useState(true);
-  const [showHideStartBtn, setStartBtn] = useState(true);
+  const [showHideStartBtn, setStartBtn] = useState(totaltime>0 ? true : false);
   const [showHideResetBtn, setResetBtn] = useState(false);
 
   function reset() {
