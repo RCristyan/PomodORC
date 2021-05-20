@@ -13,7 +13,9 @@ function StopWatch(props:any) {
     const [timerSec, setTimerSec] = useState(0);
     const [timerMin, setTimerMin] = useState(0);
     const [timerHour, setTimerHour] = useState(0);
+
     const [isPause, setIsPause] = useState(true);
+    const [showHideResetBtn, setResetBtn] = useState(false);
   
     function reset() {
       setTimerMSec(0);
@@ -21,6 +23,11 @@ function StopWatch(props:any) {
       setTimerMin(0);
       setTimerHour(0);
       setIsPause(true);
+    }
+
+    function play() {
+      setResetBtn(true);
+      setIsPause(!isPause);
     }
 
     function increaseSecs(){
@@ -74,8 +81,12 @@ function StopWatch(props:any) {
       </div>
 
       <div className="timerBtns">
-        <button className="timerBtn" onClick={() => {setIsPause(!isPause)}}>{isPause ? "Retomar" : "Pausar"}</button>
-        <button className="timerBtn" onClick={reset}>Reiniciar</button>       
+        <button className="timerBtn" onClick={play}>{showHideResetBtn ? 
+          (isPause ? "Retomar" : "Pausar") : "Iniciar"}</button>
+
+        {showHideResetBtn && (
+          <button className="timerBtn" onClick={reset}>Reiniciar</button>
+        )}      
       </div>
 
     </div>

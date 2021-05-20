@@ -14,7 +14,7 @@ function App() {
     <div className="App">
 
       <Sidebar />
-      <Timer listTitle="Lista1" activityTitle="Tarefa1" totaltime={300}/>
+      <Timer listTitle="Lista1" activityTitle="Tarefa1" totaltime={2520}/>
       <Header />
     </div>
   );

@@ -21,7 +21,6 @@ const ProgressBar = (props: any) => {
         const progressOffset = (progress) * 400;
         setOffset(progressOffset);
         barRef.current.style = 'transition: width 2s ease-out;';
-        console.log({timeNow})
     }, [setOffset, progress, offset]);
 
     return (

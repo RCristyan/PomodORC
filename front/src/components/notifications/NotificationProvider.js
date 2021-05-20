@@ -1,6 +1,7 @@
 import react, { createContext } from 'react';
-import React, {useReducer, useContext} from 'react';
+import React, {useState, useReducer, useContext} from 'react';
 import Notification from './Notification';
+import './Notifications.css'
 
 const NotificationContext = createContext();
 
@@ -37,6 +38,7 @@ export const useNotification = () =>{
         dispatch({
             type:"ADD_NOTIFICATION",
             payload:{
+              id: Math.floor(Math.random()*100),  
               ...props
             }
           })

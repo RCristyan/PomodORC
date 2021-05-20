@@ -1,6 +1,7 @@
 import { timeout } from 'q';
 import react from 'react';
 import React, {useState} from 'react';
+import './Notifications.css'
 
 const Notification = (props:any) =>{
     const [exit, setExit] = useState(false);
@@ -13,6 +14,7 @@ const Notification = (props:any) =>{
                 id: props.id
             })
         }, 400);
+        
     }
 
     return(

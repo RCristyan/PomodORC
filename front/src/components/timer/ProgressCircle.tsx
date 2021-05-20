@@ -5,7 +5,7 @@ import React, { useEffect, useState, useRef } from 'react';
 const ProgressCircle = (props: any) => {
     const {
         size,
-        cycletime,
+        circleTotalTime,
         strokeWidth,
         timerSec,
         timerMin
@@ -16,7 +16,7 @@ const ProgressCircle = (props: any) => {
     const circumference = radius * 2 * Math.PI;
 
     let timeNow = timerMin*60 + timerSec;
-    const progress = (cycletime - timeNow) / cycletime;
+    const progress = (circleTotalTime - timeNow) / circleTotalTime;
 
     const circleRef:any = useRef(null);
     const [offset, setOffset] = useState(0);
