@@ -24,7 +24,7 @@ export default {
   async readActivity(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
     try {
-      const allActivities = await Activities.findById(id);
+      const allActivities = (await List.findById(id)).activities;
 
       return res.status(201).json(allActivities);
 
@@ -32,6 +32,20 @@ export default {
       return res.status(400).json({ err });
     }
   },
+
+  async readActivityName(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+    try {
+      const ActivityName = (await Activities.findById(id)).name;
+
+      return res.status(201).json(ActivityName);
+
+    } catch (err) {
+      return res.status(400).json({ err });
+    }
+  },
+  
+  
 
   async updateActivity(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;

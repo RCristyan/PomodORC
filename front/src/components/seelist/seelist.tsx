@@ -8,14 +8,20 @@ import api from '../../services/api';
 function Seelist() {
 
     const [listTitle, setListTitle] = useState([]);
+    const [activityName, setActivityName] = useState('');
+    const [activityStatus, setActivityStatus] = useState(false);
 
-    useEffect(() => {
-
-        api.get(`/read`).then(res => {
-            const list = res.data;
-            setListTitle(list);
-        })
-    })
+    // const seeList = async (id:string) => {
+    //     try {
+    //         await api.get(`/readact/${id}`).then(res => {
+    //             const list = res.data;
+    //             setActivityName(list)
+    //         };
+    //         window.location.reload();
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 
 
     return (

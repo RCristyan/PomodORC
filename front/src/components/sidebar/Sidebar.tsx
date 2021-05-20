@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import icon from '../../assets/icon_plus.png';
 import './Sidebar.css';
 import SubMenu from './SubMenu';
-import axios from 'axios';
+import api from '../../services/api'
 
 function Sidebar() {
 
@@ -12,7 +12,7 @@ function Sidebar() {
 
   useEffect(() => {
 
-    axios.get(`http://localhost:5000/api/read`).then(res => {
+    api.get(`/read`).then(res => {
       const list = res.data;
       setListTitle(list);
     })

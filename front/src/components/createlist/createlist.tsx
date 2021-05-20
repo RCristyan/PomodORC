@@ -18,7 +18,6 @@ function Createlist() {
             console.log(error);
         }
     }
-    console.log(newTitle);
 
     return (
 

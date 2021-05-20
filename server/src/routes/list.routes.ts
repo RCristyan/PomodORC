@@ -12,6 +12,7 @@ router.put('/update/:id', listServer.updateList);
 
 router.post('/create/:id/', activitieServer.createActivity);
 router.get('/readact/:id/', activitieServer.readActivity);
+router.get('/readactname/:id/', activitieServer.readActivityName);
 router.delete('/deleteact/:id/', activitieServer.deleteActivity);
 router.put('/updateact/:id/', activitieServer.updateActivity);
 router.put('/updatestatus/:id/', activitieServer.updateStatus);
