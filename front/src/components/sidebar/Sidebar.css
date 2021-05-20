@@ -36,14 +36,13 @@
 
 .sbDropdown{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     text-decoration: none;
     color: #5BED43;
 }
 
 .sbDropdown:hover{
-    box-shadow: 0px 1px 10px #674D41;
-    border-radius: 4px;
+    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -56,6 +55,7 @@
     color: #5BED43;
     text-decoration: none;
     font-size: .8em;
+    margin-left: 1rem;
 }
 
 .sbLink:hover{
