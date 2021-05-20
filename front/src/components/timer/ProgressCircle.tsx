@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 const ProgressCircle = (props: any) => {
     const {
         size,
-        cycletime,
+        circleTotalTime,
         strokeWidth,
         timerSec,
         timerMin
@@ -14,16 +14,15 @@ const ProgressCircle = (props: any) => {
     const radius = size / 2 - strokeWidth / 2;
     const circumference = radius * 2 * Math.PI;
 
-    let timeNow = timerMin * 60 + timerSec;
-    const progress = (cycletime - timeNow) / cycletime;
+    let timeNow = timerMin*60 + timerSec;
+    const progress = (circleTotalTime - timeNow) / circleTotalTime;
 
-    const circleRef = useRef(null);
+    const circleRef:any = useRef(null);
     const [offset, setOffset] = useState(0);
     useEffect(() => {
         const progressOffset = (progress) * circumference;
         setOffset(progressOffset);
-        console.log(props)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        circleRef.current.style = 'transition: stroke-dashoffset 2s ease-out;';
     }, [setOffset, circumference, progress, offset]);
 
 
@@ -52,12 +51,12 @@ const ProgressCircle = (props: any) => {
                 >
                 </circle>
 
-                <text className="numbers" x={center} y={center}>
-                    {
-                        `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
-                    }
-                </text>
-            </svg>
+            <text className="numbers" x={center} y={center}>
+                {
+                 `${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? "0" + timerSec : timerSec}`
+                }
+            </text>
+        </svg>
         </>
     );
 }

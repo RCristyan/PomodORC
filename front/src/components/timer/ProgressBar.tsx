@@ -1,24 +1,24 @@
 /* eslint-disable no-restricted-globals */
 import "./timer.css";
 //import arrow from '../../assets/icon_arrow1.png';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const ProgressBar = (props: any) => {
     const {
         totaltime,
-        //      strokeWidth,
-        timerSec,
-        timerMin
+        strokeWidth,
+        timeNow
     } = props;
 
-    let timeNow = timerMin * 60 + timerSec;
-    let progress = (totaltime - timeNow) / totaltime;
+    let progress = 1 - ((totaltime - timeNow) / totaltime);
 
+    const barRef:any = useRef(null);
     const [offset, setOffset] = useState(0);
-    //    const circleRef = useRef(null);
+    
     useEffect(() => {
         const progressOffset = (progress) * 400;
         setOffset(progressOffset);
+        barRef.current.style = 'transition: width 2s ease-out;';
     }, [setOffset, progress, offset]);
 
     return (
@@ -31,7 +31,9 @@ const ProgressBar = (props: any) => {
 
                 <rect
                     className="bar"
-                    rx="2.5" ry="2.5" width={offset} height="5"
+                    rx="2.5" ry="2.5" 
+                    width={offset} height="5"
+                    ref={barRef}
                 />
 
             </svg>

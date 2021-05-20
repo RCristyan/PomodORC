@@ -1,0 +1,77 @@
+.notificationWrapper{
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    width: 20vw;
+}
+
+.notificationItem{
+    border: none;
+    text-align: start;
+    text-decoration: none;
+
+    color: #5BED43;
+    background-color: #311E1B;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.4);
+
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2%;
+
+    animation: SlideLeft 0.4s;
+    animation-fill-mode: forwards;
+    width: 20vw;
+    cursor: pointer;
+}
+
+@keyframes SlideLeft{
+    0% {
+        margin-left: 120%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes SlideRight{
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: 120%;
+    }
+}
+
+.notificationItem.exit{
+    animation: SlideRight 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.notificationItem p{
+    margin: 0;
+    padding: 10px;
+}
+
+.notificationItem .title{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+.notificationItem .message{
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.notificationItem.restOver{
+    color: #ffffff;
+    background-color: #eb2c35;
+}
+
+.notificationItem.allOver{
+    color: #311E1B;
+    background-color: #5BED43;
+}

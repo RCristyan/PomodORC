@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProgressCircle from "./ProgressCircle";
 import ProgressBar from './ProgressBar';
-import CTimer from './CircleTimer';
 import './timer.css';
 
 function StopWatch(props:any) {
@@ -11,10 +10,12 @@ function StopWatch(props:any) {
     } = props;
 
     const [timerMSec, setTimerMSec] = useState(0);
-    const [timerSec, setTimerSec] = useState(50);
-    const [timerMin, setTimerMin] = useState(59);
+    const [timerSec, setTimerSec] = useState(0);
+    const [timerMin, setTimerMin] = useState(0);
     const [timerHour, setTimerHour] = useState(0);
+
     const [isPause, setIsPause] = useState(true);
+    const [showHideResetBtn, setResetBtn] = useState(false);
   
     function reset() {
       setTimerMSec(0);
@@ -22,6 +23,11 @@ function StopWatch(props:any) {
       setTimerMin(0);
       setTimerHour(0);
       setIsPause(true);
+    }
+
+    function play() {
+      setResetBtn(true);
+      setIsPause(!isPause);
     }
 
     function increaseSecs(){
@@ -63,11 +69,11 @@ function StopWatch(props:any) {
 
 
   return (
-    <div className="timer">
+    <div className="stopwatch">
       <div className="listTitle">{listTitle}</div>
       <div className="activityTitle">{activityTitle}</div>
     
-      <div className="numbers">
+      <div className="sw_numbers">
              {
                 `${timerHour < 10 ? "0" + timerHour : timerHour}:${timerMin < 10 ? "0" + timerMin : timerMin}:${timerSec < 10 ? 
                     "0" + timerSec : timerSec}:${timerMSec < 10 ? "0" + timerMSec : timerMSec}`
@@ -75,9 +81,12 @@ function StopWatch(props:any) {
       </div>
 
       <div className="timerBtns">
-        <button className="timerBtnStart" onClick={() => { setIsPause(false) }}>Iniciar</button>
-        <button className="timerBtnPause" onClick={reset}>Reiniciar</button>
-        <button className="timerBtnStop" onClick={() => { setIsPause(true) }}>Parar</button>
+        <button className="timerBtn" onClick={play}>{showHideResetBtn ? 
+          (isPause ? "Retomar" : "Pausar") : "Iniciar"}</button>
+
+        {showHideResetBtn && (
+          <button className="timerBtn" onClick={reset}>Reiniciar</button>
+        )}      
       </div>
 
     </div>
