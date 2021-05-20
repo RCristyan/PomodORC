@@ -1,6 +1,7 @@
 import './seelist.css';
 import iconEdit from '../../assets/icon_edit.svg';
-import iconDump from '../../assets/icon_dump.png';
+import iconDump from '../../assets/icon_trash.png';
+import iconPlus from '../../assets/icon_plus.svg';
 import ListarTarefas from './seelistscroll';
 import { useState, useEffect } from 'react';
 import api from '../../services/api';
@@ -23,19 +24,22 @@ function Seelist() {
     //     }
     // }
 
-
     return (
         <div className="seelist">
             <section className="seelistcontainer">
                 <section className="section-title-icon">
                     {/* container do titulo */}
                     <div className="title-container">
+
                         <div className="standardtitle">
-                            <ListarTarefas items={listTitle} />
+                            {/*<ListarTarefas items={listTitle} /> */}
+                            Lista1
                         </div>
+                        
                     </div>
                     {/* conteiner dos icones */}
                     <div className="icons-container">
+
                         {/* icone de edicao */}
                         <div className="container-edit-icon">
                             <a href="a"><img className="edit-icon" src={iconEdit} alt="Editar lista" /></a>
@@ -44,13 +48,25 @@ function Seelist() {
                         <div className="container-dump-icon">
                             <a href="a"><img className="dump-icon" src={iconDump} alt="Deletar lista" /></a>
                         </div>
+
                     </div>
                 </section>
                 <section className="section-description">
+
                     {/* descricao */}
                     <div className="description-container">
-                        <p className="standard-description">Descrição</p>
+                        <p className="standard-description-title">Descrição</p>
+                        <div className="standard-description">
+
+                            Este é um exemplo de descricacao um tanto 
+                            qunato longa para ajudar nos ajustes.
+                            Este é um exemplo de descricacao um tanto 
+                            qunato longa para ajudar nos ajustes.
+                            Este é um exemplo de descricacao um tanto 
+                            qunato longa para ajudar nos ajustes
+                        </div>
                     </div>
+                    
                 </section>
 
                 <section className="lista-tarefas-container">
@@ -63,9 +79,10 @@ function Seelist() {
                         </div>
                     </div>
                     {/* plus icon de adicionar tarefas */}
-                    <div className="plus">
-                        <a href="/criartarefa"><p>+</p></a>
-                    </div>
+
+                    <a href="/criartarefa">
+                        <img className="plus" src={iconPlus}/>
+                    </a>
                 </section>
                 <div className="save_conteiner">
                     <a href="/"><button type="button" className="savebutom" >Salvar</button></a>
