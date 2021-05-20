@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.list{
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 10vw;
+    
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    background-color: #311e1b;
+    border-radius: 40px;
+}
+.section-title-icon{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.title-container{
+    width: 80%;
+}
+.standardtitle{
+    margin-top: 1.2rem;
+    font-size: 1.34rem;
+    color: #5BED43;
+}
+.icons-container{
+    display: flex;
+}
+.container-edit-icon{
+    margin-right: 1rem;
+    text-align: end;
+}
+.edit-icon{
+    width: 1.9rem;
+    margin-top: 1rem;
+}
+.edit-icon:hover{
+    opacity: 0.5;
+}
+.container-dump-icon{
+    text-align: end;
+}
+.dump-icon{
+    width: 1.9rem;
+    margin-top: 1rem;
+}
+.dump-icon:hover{
+    opacity: 0.5;
+}
+.section-description{
+    width: 90%;
+    height: 50%;
+}
+.description-container{
+    margin-top: 2rem;
+    color: #5BED43;
+}
+
+.standard-description-title{
+    font-size: 1.25rem;
+    color: #5BED43;
+    margin-bottom: .5rem;
+}
+
+.standard-description{
+    font-size: 1rem;
+    color: #5BED43;
+    margin-bottom: .75rem;
+    max-height: 3vh;
+}
+.lista-tarefas-container{
+    display: flex;
+    width:90%;
+    height: 10rem;
+}
+.container-tarefas{
+    display: flex;
+    flex-direction: column;
+}
+.title-tarefas{
+    margin-bottom: 1rem;
+}
+.standard-tarefas{
+    font-size: 1.3rem;
+    color: #5BED43;
+    margin-bottom: 1.5rem;
+}
+.listagem{
+    margin-left: 5rem;
+    color: #5BED43;
+    min-height: 1rem;
+    max-height: 4rem;
+    overflow-y: scroll;
+}
+.listagem::-webkit-scrollbar {
+    color: #5BED43;
+}
+.plus{
+    width: 2vw;
+    margin-left: 2.5vw;
+}
+.plus:hover{
+    opacity: 0.3;
+}
+.content-tarefas{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.tarefa{
+    display: flex;
+    padding-right: 1rem;
+    height:1rem;
+}
+
+.tarefa-icon{
+    width: 1rem;
+}
+
+.save_conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.savebutom{
+    font-family: Roboto;
+    font-size: 1em;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 5rem;
+    border-radius: 15px;
+    background-color: #674D41;
+    color: #5BED43;
+    outline: none;
+    border: none;
+}
+.savebutom:hover{
+    cursor: pointer;
+    background-color: #5BED43;
+    color: #311e1b;
+}

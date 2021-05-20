@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './createlist.css';
 import api from '../../services/api';
+import iconPlus from '../../assets/icon_plus.svg';
 
 function Createlist() {
 
@@ -65,8 +66,8 @@ function Createlist() {
                             <section className="task_second_conteiner">
                                 <div className="plus">
                                     <a href="/">
-                                        +
-                                        </a>
+                                        <img className="plus" src={iconPlus}/>
+                                    </a>
                                 </div>
                             </section>
                         </div>

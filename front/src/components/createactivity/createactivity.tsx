@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import icon from '../../assets/icon_dump.png';
+import iconTrash from '../../assets/icon_trash.png';
+import iconPlus from '../../assets/icon_plus.svg';
 import './createactivity.css';
 import api from '../../services/api';
 
@@ -29,7 +30,7 @@ function Createactivity() {
                 >
                     <section className="first-content">
                         <div className="title">
-                            <p className="standardtext">Nome da Lista:</p>
+                            <p className="standardtext">Título:</p>
                             <input type="text" 
                                 className="title_input" 
                                 placeholder="Insira a lista em que deseja adicionar atividade" 
@@ -40,7 +41,7 @@ function Createactivity() {
                             />
                         </div>
                         <div className="description_conteiner">
-                            <p className="standardtext">Nome da Atividade:</p>
+                            <p className="standardtext">Descrição:</p>
                             <input
                                 className="description_input" 
                                 placeholder="Insira o nome da atividade" 
@@ -56,20 +57,23 @@ function Createactivity() {
                                     <p>Timer</p>
                                 </div>
                                 <div className="title-plus-dump">
-                                    <a href="a"><p>+</p></a>
+                                    <a href="a">
+                                        <img className="plus" src={iconPlus}/>
+                                    </a>
                                     <div className="icon-dum">
                                         <a href="a">
-                                            <img src={icon} alt="lixeira deletar tarefa" />
+                                            <img src={iconTrash} alt="lixeira deletar tarefa" />
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div className="input-timer-content">
                                 <input 
-                                    className="input-timer" 
+                                    className="input-timer"
+                                    placeholder="00"
                                     type="time" 
                                 />
-                            </div>
+                            </div> 
                         </div>
                     </section>
                     <div className="save_conteiner">
@@ -90,3 +94,5 @@ function Createactivity() {
 }
 
 export default Createactivity;
+
+/**/

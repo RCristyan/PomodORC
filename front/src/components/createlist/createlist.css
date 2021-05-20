@@ -15,7 +15,7 @@
     justify-content: center;
     width: 75%;
     height: 12vh;
-    margin-top: 16%;
+    margin-top: 11%;
     margin-left: 15vw;
 }
 .createlistcontainer{
@@ -51,20 +51,18 @@
 }
 .description_conteiner{
     width: 100%;
-    margin-top: 1.2rem;
 }
 .description_input{
     display: flex;
     width: 100%;
-    height: 9rem;
+    height: 2rem;
     margin-top: 0.5rem;
-    padding-top: 0.5rem;
     background-color: #B4FF8A;
     padding-left: 0.5rem;
     outline: none;
     border: none;
     color: #311E1B;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .tasks_conteiner{
     display: flex;

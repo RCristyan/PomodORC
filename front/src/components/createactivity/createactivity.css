@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 .createactivity{
+    font-family: Roboto;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -10,6 +12,7 @@
     margin-top: 16%;
     margin-left: 15vw;
 }
+
 .createactivitycontainer{
     display: flex;
     justify-content: center;
@@ -17,6 +20,7 @@
     background-color: #311E1B;
     border-radius: 40px;
 }
+
 .createactivityform{
     display: flex;
     flex-direction: column;
@@ -32,8 +36,7 @@
     width: 100%;
 }
 .standardtext{
-    font-size: 1.3rem;
-    font-family: Roboto, sans-serif;
+    font-size: 1.25rem;
     color: #5BED43;
 }
 .title_input{
@@ -84,7 +87,8 @@
     opacity: 0.8;
 }
 
-/* Style timer */
+ /*Style timer*/
+  
 .timer-content{
     display: flex;
     margin-top: 1rem;
@@ -96,7 +100,7 @@
 .title-timer{
     width: 30%;
     color: #5BED43;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 .title-plus-dump{
     display: flex;
@@ -117,7 +121,7 @@
     border: none;
     outline: none;
     color: #5BED43;
-    font-family: roboto, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 .input-timer::-webkit-calendar-picker-indicator{
     filter: blur(100px);
@@ -136,5 +140,5 @@ a:visited{
     margin-left: 1rem;
 }
 img{
-    width: 5%;
+    width: 1.9vw;
 }
