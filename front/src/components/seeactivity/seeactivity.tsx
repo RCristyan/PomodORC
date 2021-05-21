@@ -35,10 +35,10 @@ function SeeActivity() {
     // }
     let timeInput = (document.getElementById("timeInput") as HTMLInputElement);
     let timeValue = (timeInput ===null) ? "" : timeInput.value;
+    let totaltime = (timeValue==="") ? 0 : (parseInt(timeValue.substr(0,2))*3600 + parseInt(timeValue.substr(-2,2))*60);
 
     function handleTimer(){
         timeValue = (timeInput ===null) ? "" : timeInput.value;
-        let totaltime = parseInt(timeValue.substr(0,2))*3600 + parseInt(timeValue.substr(-2,2))*60;
         setHasTimer(true);
         if(timeValue!==""){
             console.log(totaltime)
@@ -122,9 +122,11 @@ function SeeActivity() {
                         </button>
                     </a>                
 
-                    <button className="pomoBtn" onClick={handleTimer}>
-                        <img className="img" src={iconPomo}/>
-                    </button>
+                    <a className="pomoBtnLink" href={`/${listTitle}/${activityName}/${totaltime}`}>
+                        <button className="pomoBtn">
+                            <img className="img" src={iconPomo}/>
+                        </button>
+                    </a>
                 </div>
                 
             </section>
