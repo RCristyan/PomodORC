@@ -1,10 +1,12 @@
 import React from "react";
 import Timer from "../components/timer/timer";
 
-function Home() {
+function Home(props:any) {
+  let time = props.match.params.totaltime===undefined ? 0: props.match.params.totaltime;
+
   return (
     <div className="Home">
-      <Timer totaltime={0}/>
+      <Timer totaltime={time}/>
     </div>
   );
 }
