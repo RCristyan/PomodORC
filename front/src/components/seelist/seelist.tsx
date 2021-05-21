@@ -71,7 +71,7 @@ function Seelist(title:any, id:any) {
                         <div className="standard-tarefas">Tarefas</div>
                         {/* lista de tarefas */}
                         <div className="listagem">
-                            lalal
+
                         </div>
                     </div>
                     {/* plus icon de adicionar tarefas */}
