@@ -72,19 +72,21 @@
     justify-content: flex-end;
 }
 .savebutom{
+    font-family: Roboto;
+    font-size: 1em;
     margin-bottom: 1rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     width: 5rem;
-    height: 1.8rem;
     border-radius: 15px;
-    background-color: #492f2b;
-    color: #B4FF8A;
+    background-color: #674D41;
+    color: #5BED43;
     outline: none;
     border: none;
 }
 .savebutom:hover{
     cursor: pointer;
-    opacity: 0.8;
+    background-color: #5BED43;
+    color: #311e1b;
 }
 
  /*Style timer*/
