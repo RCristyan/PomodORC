@@ -2,28 +2,30 @@ import './seelist.css';
 import iconEdit from '../../assets/icon_edit.svg';
 import iconDump from '../../assets/icon_trash.png';
 import iconPlus from '../../assets/icon_plus.svg';
-import ListarTarefas from './seelistscroll';
-import { useState, useEffect } from 'react';
 import api from '../../services/api';
+import { useState, useEffect} from 'react';
 
-function Seelist() {
 
-    const [listTitle, setListTitle] = useState([]);
-    const [activityName, setActivityName] = useState('');
-    const [activityStatus, setActivityStatus] = useState(false);
+function Seelist(title:any, id:any) {
 
-    // const seeList = async (id:string) => {
-    //     try {
-    //         await api.get(`/readact/${id}`).then(res => {
-    //             const list = res.data;
-    //             setActivityName(list)
-    //         };
-    //         window.location.reload();
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
+    const [listName, setListName] = useState(title.title)
+    const [listBody, setListBody] = useState(title.body)
+    const [nameAct, setNameAct] = useState()
 
+    useEffect(() => {
+        api.get(`/readone/${title.id}`).then(res =>{
+            const list = res.data
+            setListBody(list.body)
+        })
+    })
+//     useEffect(() => {
+//         api.get(`/readact/${title.id}`).then(res =>{
+//             const list2 = res.data
+//             setNameAct(list2)
+//         })
+//     })
+
+// console.log(nameAct)
     return (
         <div className="seelist">
             <section className="seelistcontainer">
@@ -32,8 +34,8 @@ function Seelist() {
                     <div className="title-container">
 
                         <div className="standardtitle">
-                            {/*<ListarTarefas items={listTitle} /> */}
-                            Lista1
+                            {/* aqui vem o nome {listName} */}
+                            {listName}
                         </div>
                         
                     </div>
@@ -57,13 +59,7 @@ function Seelist() {
                     <div className="description-container">
                         <p className="standard-description-title">Descrição</p>
                         <div className="standard-description">
-
-                            Este é um exemplo de descricacao um tanto 
-                            qunato longa para ajudar nos ajustes.
-                            Este é um exemplo de descricacao um tanto 
-                            qunato longa para ajudar nos ajustes.
-                            Este é um exemplo de descricacao um tanto 
-                            qunato longa para ajudar nos ajustes
+                            {listBody}
                         </div>
                     </div>
                     
@@ -71,16 +67,16 @@ function Seelist() {
 
                 <section className="lista-tarefas-container">
                     <div className="container-tarefas">
-                        {/* titulo tarefas */}
+                        {/* titulo tarefas */}  
                         <div className="standard-tarefas">Tarefas</div>
                         {/* lista de tarefas */}
                         <div className="listagem">
-                            
+                            lalal
                         </div>
                     </div>
                     {/* plus icon de adicionar tarefas */}
 
-                    <a href="/criartarefa">
+                    <a href={`/criartarefa/${title.id}`}>
                         <img className="plus" src={iconPlus}/>
                     </a>
                 </section>

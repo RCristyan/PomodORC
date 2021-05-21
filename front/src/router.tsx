@@ -15,8 +15,8 @@ const Routes = () => {
                 <Route path='/' exact component={Home} />
                 <Route path='/:list/:activity/:totaltime' exact component={Home} />
                 <Route path='/criarlista' exact component={createlist} />
-                <Route path='/criartarefa' exact component={CreateActivityPage} />
-                <Route path='/verlista' exact component={SeeListPage} />
+                <Route path='/criartarefa/:_id' exact component={CreateActivityPage} />
+                <Route path='/:title/:_id/' exact component={SeeListPage} />
             </Switch>
             <Header />
         </Router>

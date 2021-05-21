@@ -100,17 +100,20 @@
 .title-timer{
     width: 30%;
     color: #5BED43;
-    font-size: 1.25em;
+    font-size: 1.5em;
+    background-color: #311E1B;
 }
 .title-plus-dump{
     display: flex;
     font-weight: bold;
     font-size: 2rem;
+    background-color: #311E1B;
 }
 .input-timer-content{
     justify-content: start;
     border: none;
     width: 100%;
+    background-color: #311E1B;
 }
 .input-timer{
     height: 6rem;

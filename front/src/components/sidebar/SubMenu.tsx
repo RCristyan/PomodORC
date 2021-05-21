@@ -27,10 +27,9 @@ function SubMenu({ items }: listProps) {
       </div>
       {subnav && items.map((item: any, index: any) => {
         return (
-          <a className="sbLink" href={'/verlista'} onClick={showSubNav}>
+          <a className="sbLink" href={`/${item.title}/${item._id}`} onClick={showSubNav}>
             <div className="arrow-edit">
               <img className="sbListIcon" src={icon2} alt="icon2" />
-
               <div>{item.title}</div>
             </div>
           </a>

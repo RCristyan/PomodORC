@@ -3,12 +3,11 @@ import iconTrash from '../../assets/icon_trash.png';
 import iconPlus from '../../assets/icon_plus.svg';
 import './createactivity.css';
 import api from '../../services/api';
-import ListarTarefas from '../seelist/seelistscroll'
 
-function Createactivity() {
+function Createactivity(props:any) {
 
     const [newName, setNewName] = useState('');
-    const [idList, setIdList] = useState('');
+    const [idList, setIdList] = useState(props);
     const [lists, setLists] = useState([]);
 
     useEffect(() => {
@@ -41,20 +40,11 @@ function Createactivity() {
                 >
                     <section className="first-content">
                         <div className="title">
-                            <p className="standardtext">Minhas Listas:</p>
-                            <div>
-                                <ListarTarefas 
-                                    items={lists}
-                                />
-                            </div>
-                        </div>
-                        <div className="description_conteiner">
-                            <p className="standardtext">Descrição:</p>
-                            <input
-                                className="description_input" 
-                                placeholder="Insira o nome da atividade" 
+                            <p className="standardtext">Nome da atividade:</p>
+                            <input 
+                                type="text"
                                 value={newName}
-                                onChange= {(event) =>{
+                                onChange = {(event) => {
                                     setNewName(event.target.value)
                                 }}
                             />
