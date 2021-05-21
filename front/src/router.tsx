@@ -13,7 +13,7 @@ const Routes = () => {
             <Sidebar />
             <Switch>
                 <Route path='/' exact component={Home} />
-                <Route path='/:totaltime' exact component={Home} />
+                <Route path='/:list/:activity/:totaltime' exact component={Home} />
                 <Route path='/criarlista' exact component={createlist} />
                 <Route path='/criartarefa' exact component={CreateActivityPage} />
                 <Route path='/verlista' exact component={SeeListPage} />
