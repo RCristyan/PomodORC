@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import './seelist.css';
-import icon from '../../assets/icon_arrow.svg';
+import icon from '../../assets/icon_arrow1.svg';
 interface tarefasProps {
   items: Array<any>;
 }
