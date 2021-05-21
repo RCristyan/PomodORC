@@ -11,9 +11,16 @@ function SeeActivity() {
 
     const [hasTimer, setHasTimer] = useState(false);
 
-    const [listTitle, setListTitle] = useState([]);
-    const [activityName, setActivityName] = useState('');
+    const [listTitle, setListTitle] = useState("lista1");
+    const [activityName, setActivityName] = useState('Tarefa1');
+    const [activityDescription, setActivityDescription] = useState('Este é um exemplo de descricacao um tanto'+ 
+    "qunato longa para ajudar nos ajustes."+
+    "Este é um exemplo de descricacao um tanto"+ 
+    "qunato longa para ajudar nos ajustes."+
+    "Este é um exemplo de descricacao um tanto" +
+    'qunato longa para ajudar nos ajustes');
     const [activityStatus, setActivityStatus] = useState(false);
+    const [activityTime, setActivityTime] = useState("10:25");
 
     // const seeList = async (id:string) => {
     //     try {
@@ -26,17 +33,28 @@ function SeeActivity() {
     //         console.log(error);
     //     }
     // }
+    let timeInput = (document.getElementById("timeInput") as HTMLInputElement);
+    let timeValue = (timeInput ===null) ? "" : timeInput.value;
+
+    function handleTimer(){
+        timeValue = (timeInput ===null) ? "" : timeInput.value;
+        let totaltime = parseInt(timeValue.substr(0,2))*3600 + parseInt(timeValue.substr(-2,2))*60;
+        setHasTimer(true);
+        if(timeValue!==""){
+            console.log(totaltime)
+        }
+    }
 
     return (
         <div className="seelist">
+            
             <section className="seelistcontainer">
                 <section className="section-title-icon">
                     {/* container do titulo */}
                     <div className="title-container">
 
                         <div className="standardtitle">
-                            {/*<ListarTarefas items={listTitle} /> */}
-                            Tarefa1
+                            {activityName}
                         </div>
                         
                     </div>
@@ -60,13 +78,7 @@ function SeeActivity() {
                     <div className="description-container">
                         <p className="standard-description-title">Descrição</p>
                         <div className="standard-description">
-
-                            Este é um exemplo de descricacao um tanto 
-                            qunato longa para ajudar nos ajustes.
-                            Este é um exemplo de descricacao um tanto 
-                            qunato longa para ajudar nos ajustes.
-                            Este é um exemplo de descricacao um tanto 
-                            qunato longa para ajudar nos ajustes
+                            {activityDescription}
                         </div>
                     </div>
                     
@@ -90,21 +102,29 @@ function SeeActivity() {
                     
                     </div>
                     {hasTimer && <div className="input-timer-content">
-                        <input 
+                        <input
+                            id="timeInput"
                             className="input-timer"
-                            type="time" 
+                            type="time"
                         />
+                        <div className="timeRefTexts">
+                            <div className="timeRefHrs">hrs</div>
+                            <div className="timeRefMin">min</div>
+                        </div>
+
                     </div>}           
                 </section>
 
                 <div className="timerBtns">
-                    <button className="cronoBtn">
-                        <img className="img" src={iconCrono}/>
-                    </button>
+                    <a className="cronoBtnLink" href={`/${listTitle}/${activityName}/crono`}>
+                        <button className="cronoBtn" >
+                            <img className="img" src={iconCrono}/>
+                        </button>
+                    </a>                
 
-                    {hasTimer && <button className="pomoBtn">
+                    <button className="pomoBtn" onClick={handleTimer}>
                         <img className="img" src={iconPomo}/>
-                    </button>}
+                    </button>
                 </div>
                 
             </section>

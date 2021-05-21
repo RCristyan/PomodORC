@@ -92,6 +92,19 @@
     margin-left: 5%;
 }
 
+.timeRefTexts{
+    color: #5BED43;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.timeRefHrs{
+    margin-left: 12.5%;
+}
+.timeRefMin{
+    margin-left: 17.5%;
+}
+
 .plus{
     width: 2vw;
     padding-left: 15vw;
@@ -130,15 +143,20 @@
     margin-left: 55%;
 }
 
+.cronoBtnLink{
+    margin-right: 10%;
+}
 .cronoBtn{
     text-decoration: none;
     background: none;
     border: none;
-    margin-right: 10%;
     cursor: pointer;
 }
 .cronoBtn .img{
     width: 3vw;
+}
+.cronoBtn:hover{
+    opacity: 0.5;
 }
 
 .pomoBtn{
@@ -151,6 +169,9 @@
 .pomoBtn .img{
     width: 3.5vw;
 }
+.pomoBtn:hover{
+    opacity: 0.5;
+}
 
 .plusBtn{
     text-decoration: none;
@@ -158,10 +179,16 @@
     border: none;
     cursor: pointer;
 }
+.plusBtn:hover{
+    opacity: 0.5;
+}
 
 .trashBtn{
     text-decoration: none;
     background: none;
     border: none;
     cursor: pointer;
+}
+.trashBtn:hover{
+    opacity: 0.5;
 }
