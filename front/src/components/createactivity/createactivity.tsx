@@ -8,15 +8,7 @@ function Createactivity(props:any) {
 
     const [newName, setNewName] = useState('');
     const [idList, setIdList] = useState(props);
-    const [lists, setLists] = useState([]);
 
-    useEffect(() => {
-
-        api.get(`/read`).then(res => {
-          const listA = res.data;
-          setLists(listA);
-        })
-      });
 
     const newActivity = async (name: string, id:string) => {
         try {
@@ -28,7 +20,7 @@ function Createactivity(props:any) {
             console.log(error);
         }
     }
-
+    console.log(newName);
 
     return (
         <div className="createactivity">
@@ -36,13 +28,13 @@ function Createactivity(props:any) {
                 <form 
                     className="createactivityform" 
                     method="" 
-                    action="/"
                 >
                     <section className="first-content">
                         <div className="title">
                             <p className="standardtext">Nome da atividade:</p>
                             <input 
                                 type="text"
+                                placeholder="digite algo"
                                 value={newName}
                                 onChange = {(event) => {
                                     setNewName(event.target.value)
@@ -55,11 +47,11 @@ function Createactivity(props:any) {
                                     <p>Timer</p>
                                 </div>
                                 <div className="title-plus-dump">
-                                    <a href="a">
+                                    <a>
                                         <img className="plus" src={iconPlus}/>
                                     </a>
                                     <div className="icon-dum">
-                                        <a href="a">
+                                        <a>
                                             <img src={iconTrash} alt="lixeira deletar tarefa" />
                                         </a>
                                     </div>
@@ -75,9 +67,9 @@ function Createactivity(props:any) {
                         </div>
                     </section>
                     <div className="save_conteiner">
-                        <a href="/">
+                        <a>
                             <button 
-                                type="submit" 
+                                type="submit"
                                 className="savebutom" 
                                 onClick={() =>{newActivity(newName, idList)}}
                             >
