@@ -1,28 +1,31 @@
-import './seelist.css';
+import './seeactivity.css';
 import iconEdit from '../../assets/icon_edit.svg';
-import iconDump from '../../assets/icon_trash.png';
+import iconTrash from '../../assets/icon_trash.png';
 import iconPlus from '../../assets/icon_plus.svg';
+import iconCrono from '../../assets/icon_crono.svg';
+import iconPomo from '../../assets/icon_pomodoro_green.png';
 import { useState, useEffect } from 'react';
-import {useNotification} from "../createactivity/Activity"
+import api from '../../services/api';
 
-function Activity() {
+function SeeActivity() {
+
+    const [hasTimer, setHasTimer] = useState(false);
 
     const [listTitle, setListTitle] = useState([]);
     const [activityName, setActivityName] = useState('');
     const [activityStatus, setActivityStatus] = useState(false);
 
-
-    const dispatch = useNotification();
-  
-    function handleActivityUpdate(){
-        dispatch({
-            id: "id",
-            name: {activityName},
-            listName: {listTitle},
-            time: "activityTime",
-            status: {activityStatus}
-        })
-    }
+    // const seeList = async (id:string) => {
+    //     try {
+    //         await api.get(`/readact/${id}`).then(res => {
+    //             const list = res.data;
+    //             setActivityName(list)
+    //         };
+    //         window.location.reload();
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 
     return (
         <div className="seelist">
@@ -33,7 +36,7 @@ function Activity() {
 
                         <div className="standardtitle">
                             {/*<ListarTarefas items={listTitle} /> */}
-                            Lista1
+                            Tarefa1
                         </div>
                         
                     </div>
@@ -46,7 +49,7 @@ function Activity() {
                         </div>
                         {/* icone de lixeira */}
                         <div className="container-dump-icon">
-                            <a href="a"><img className="dump-icon" src={iconDump} alt="Deletar lista" /></a>
+                            <a href="a"><img className="dump-icon" src={iconTrash} alt="Deletar lista" /></a>
                         </div>
 
                     </div>
@@ -69,26 +72,43 @@ function Activity() {
                     
                 </section>
 
-                <section className="lista-tarefas-container">
-                    <div className="container-tarefas">
-                        {/* titulo tarefas */}
-                        <div className="standard-tarefas">Tarefas</div>
-                        {/* lista de tarefas */}
-                        <div className="listagem">
-                            
+                <section className="timer-container">
+                    <div className="text-content">
+                        <div className="title-timer">
+                            <p>Timer</p>
                         </div>
+                        <div className="title-plus-dump">
+                            <button className="plusBtn" onClick={()=>setHasTimer(true)}>
+                                <img className="plus" src={iconPlus}/>
+                            </button>
+                        </div>
+                        <div className="icon-dum">
+                            <button className="trashBtn" onClick={()=>setHasTimer(false)}>
+                                <img src={iconTrash} alt="lixeira deletar tarefa" />
+                            </button>
+                        </div>
+                    
                     </div>
-                    {/* plus icon de adicionar tarefas */}
-
-                    <a href="/criartarefa">
-                        <img className="plus" src={iconPlus}/>
-                    </a>
+                    {hasTimer && <div className="input-timer-content">
+                        <input 
+                            className="input-timer"
+                            type="time" 
+                        />
+                    </div>}           
                 </section>
-                <div className="save_conteiner">
-                    <a href="/"><button type="button" className="savebutom" >Salvar</button></a>
+
+                <div className="timerBtns">
+                    <button className="cronoBtn">
+                        <img className="img" src={iconCrono}/>
+                    </button>
+
+                    {hasTimer && <button className="pomoBtn">
+                        <img className="img" src={iconPomo}/>
+                    </button>}
                 </div>
+                
             </section>
         </div>
     )
 }
-export default Activity;
+export default SeeActivity;

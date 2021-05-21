@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.seelist{
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 50%;
+    margin-top: 15%;
+    margin-left: 6vw;
+    
+}
+.seelistcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    background-color: #311e1b;
+    border-radius: 40px;
+}
+.section-title-icon{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.title-container{
+    width: 80%;
+}
+.standardtitle{
+    margin-top: 1.4rem;
+    font-size: 1.34rem;
+    color: #5BED43;
+}
+.icons-container{
+    display: flex;
+}
+.container-edit-icon{
+    margin-right: 1rem;
+    text-align: end;
+}
+.edit-icon{
+    width: 1.9rem;
+    margin-top: 1rem;
+}
+.edit-icon:hover{
+    opacity: 0.5;
+}
+.container-dump-icon{
+    text-align: end;
+}
+.dump-icon{
+    width: 1.9rem;
+    margin-top: 1rem;
+}
+.dump-icon:hover{
+    opacity: 0.5;
+}
+.section-description{
+    width: 90%;
+    height: 50%;
+}
+.description-container{
+    margin-top: 2rem;
+    color: #5BED43;
+}
+
+.standard-description-title{
+    font-size: 1.25rem;
+    color: #5BED43;
+    margin-bottom: .5rem;
+}
+
+.standard-description{
+    font-size: 1rem;
+    color: #5BED43;
+    margin-bottom: .75rem;
+    max-height: 3vh;
+}
+
+.timer-container{
+    align-self: flex-start;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.input-timer{
+    width: fit-content;
+    align-self: flex-start;
+    margin-left: 5%;
+}
+
+.plus{
+    width: 2vw;
+    padding-left: 15vw;
+}
+.plus:hover{
+    opacity: 0.3;
+}
+
+.save_conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.savebutom{
+    font-family: Roboto;
+    font-size: 1em;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    width: 5rem;
+    border-radius: 15px;
+    background-color: #674D41;
+    color: #5BED43;
+    outline: none;
+    border: none;
+}
+.savebutom:hover{
+    cursor: pointer;
+    background-color: #5BED43;
+    color: #311e1b;
+}
+
+.timerBtns{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.5%;
+    margin-left: 55%;
+}
+
+.cronoBtn{
+    text-decoration: none;
+    background: none;
+    border: none;
+    margin-right: 10%;
+    cursor: pointer;
+}
+.cronoBtn .img{
+    width: 3vw;
+}
+
+.pomoBtn{
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 4vw;
+    cursor: pointer;
+}
+.pomoBtn .img{
+    width: 3.5vw;
+}
+
+.plusBtn{
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.trashBtn{
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

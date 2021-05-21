@@ -6,6 +6,8 @@ import createlist from "./pages/createlistpage";
 import CreateActivityPage from "./pages/createactivitypage";
 import Home from "./pages/home";
 import SeeListPage from "./pages/seelistpage";
+import SeeActivityPage from './pages/seeactivitypage';
+
 
 const Routes = () => {
     return (
@@ -17,6 +19,7 @@ const Routes = () => {
                 <Route path='/criarlista' exact component={createlist} />
                 <Route path='/criartarefa' exact component={CreateActivityPage} />
                 <Route path='/verlista' exact component={SeeListPage} />
+                <Route path='/vertarefa' exact component={SeeActivityPage} />
             </Switch>
             <Header />
         </Router>
